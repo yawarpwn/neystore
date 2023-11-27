@@ -1,14 +1,11 @@
 import { createProduct } from '@/actions/products'
+import CreateProductForm from '@/components/ui/dashboard/products/create-product-form'
 
 function CreatePage() {
   return (
     <div>
       CreatePage
-      <form action={createProduct}>
-        <input placeholder="name" name="name" />
-        <input type="file" name="image" />
-        <button>Enviar</button>
-      </form>
+      <CreateProductForm />
     </div>
   )
 }
