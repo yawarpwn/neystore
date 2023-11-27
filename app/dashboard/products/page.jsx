@@ -1,7 +1,6 @@
 import { fetchProducts } from '@/lib/products'
 async function ProductsPage() {
   const products = await fetchProducts()
-  console.log(products)
 
   return (
     <div>
