@@ -1,14 +1,37 @@
-import LoginForm from '@/components/ui/login-form'
+import Image from 'next/image'
+import Link from 'next/link'
 
-export default function LoginPage() {
+import { cn } from '@/lib/utils'
+import { buttonVariants } from '@/components/ui/button'
+import UserAuthForm from '@/components/ui/login-form'
+
+export const metadata = {
+  title: 'Authentication',
+  description: 'Authentication forms built using the components.',
+}
+
+export default function AuthenticationPage() {
   return (
-    <main className="flex items-center justify-center md:h-screen">
-      <div className="relative mx-auto flex w-full max-w-[400px] flex-col space-y-2.5 p-4 md:-mt-32">
-        <div className="flex h-20 w-full items-end rounded-lg bg-blue-500 p-3 md:h-36">
-          <div className="w-32 text-white md:w-36">Logo</div>
+    <div className="lg:p-8">
+      <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
+        <div className="flex flex-col space-y-2 text-center">
+          <h1 className="text-2xl font-semibold tracking-tight">
+            Solo administradores
+          </h1>
+          <p className="text-sm text-muted-foreground">
+            Esta sección es solo para personal autorizado
+          </p>
         </div>
-        <LoginForm />
+        <UserAuthForm />
+        <p className="px-8 text-center text-sm text-muted-foreground">
+          <Link
+            href="/"
+            className="underline underline-offset-4 hover:text-primary"
+          >
+            Regresar
+          </Link>
+        </p>
       </div>
-    </main>
+    </div>
   )
 }

@@ -8,7 +8,6 @@ import bcrypt from 'bcrypt'
 async function getUser(email) {
   try {
     const user = await sql`SELECT * from users where email=${email}`
-    console.log('user: ', user.rows[0])
     return user.rows[0]
   } catch (error) {
     console.error('Failed to fetch user:', error)
