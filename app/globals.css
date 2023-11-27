@@ -75,3 +75,16 @@
   }
 }
 
+@layer components {
+  .text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    margin: 2px 0px 0px 0px;
+    padding: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
+  }
+}
