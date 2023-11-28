@@ -23,9 +23,11 @@ export default function RootLayout({ children }) {
           fontSans.variable,
         )}
       >
-        <SiteHeader />
-        {children}
-        <SiteFooter />
+        <div className="relative flex min-h-screen flex-col">
+          <SiteHeader />
+          <div className="flex-1">{children}</div>
+          <SiteFooter />
+        </div>
       </body>
     </html>
   )

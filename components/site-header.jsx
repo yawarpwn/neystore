@@ -7,6 +7,8 @@ import { MainNav } from '@/components/main-nav'
 import { MobileNav } from '@/components/mobile-nav'
 import { ModeToggle } from '@/components/mode-toggle'
 import { buttonVariants } from '@/components/ui/button'
+import { FaceIcon } from '@radix-ui/react-icons'
+import { FacebookIcon } from 'lucide-react'
 
 export function SiteHeader() {
   return (
@@ -33,7 +35,7 @@ export function SiteHeader() {
                   'w-9 px-0',
                 )}
               >
-                <Icons.gitHub className="h-4 w-4" />
+                <Icons.facebook className="w-5 h-5 fill-current" />
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>
@@ -46,8 +48,8 @@ export function SiteHeader() {
                   'w-9 px-0',
                 )}
               >
-                <Icons.twitter className="h-3 w-3 fill-current" />
-                <span className="sr-only">Twitter</span>
+                <Icons.tiktok className="w-5 h-5 fill-current" />
+                <span className="sr-only">TikTok</span>
               </div>
             </Link>
             <ModeToggle />

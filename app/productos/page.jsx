@@ -6,10 +6,12 @@ async function ProductPage() {
   const products = await fetchProducts()
   console.log(products)
   return (
-    <div className="grid grid-cols-[repeat(auto-fill,minmax(168px,1fr))]">
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
+    <div className="container relative">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))]">
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
     </div>
   )
 }
