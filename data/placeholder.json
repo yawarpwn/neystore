@@ -2,10 +2,10 @@
   {
     "id": "zzjofhz_1",
     "title": "SAMSUNG Galaxy Tab S6 Lite - Tablet Android de 10.4 pulgadas y 64 GB, S Pen incluido, diseño delgado de metal, altavoces dobles AKG, batería de larga duración, versión estadounidense, 2022, rosa de gasa",
-    "price": 100,
-    "offert": 800,
+    "price": 800,
+    "offert": 700,
     "ranking": 5,
-    "description": [
+    "descriptions": [
       "S PEN INCLUIDO: El S Pen incluido hace que sea más fácil que nunca escribir notas y personalizar fotos y videos, todo sin necesidad de cargar. El S Pen se fija magnéticamente directamente a su tableta y siempre está listo para usar.",
       "Diseño delgado de metal: lleva esta tableta elegante y ligera a cualquier lugar. Su diseño delgado se desliza directamente en tu bolso y viene en tu elección de colores elegantes.",
       "LISTO PARA EL ENTRETENIMIENTO: Una pantalla vívida y nítida te atrae al contenido, mientras que los altavoces duales con sonido AKG proporcionan un amplio sonido envolvente Dolby Atmos. Con el descubrimiento impulsado por Spotify, establecer una banda sonora personal para tus momentos de vigilia nunca ha sido tan fácil.",
@@ -20,7 +20,7 @@
       "Tamaño de pantalla": "10,4 Pulgadas",
       "Resolución Máxima de Pantalla": "2000 x 1200 Píxeles"
     },
-    "details": {
+    "infoProduct": {
       "Capacidad de almacenamiento de memoria": "64 GB",
       "Sistema operativo": "Android",
       "Tamaño de la memoria RAM instalada": "4 GB",
@@ -47,6 +47,19 @@
       "Fabricante de CPU": "Qualcomm",
       "Velocidad de la CPU": "2,3 GHz"
     },
+    "detailsProduct": {
+      "Marca": "SAMSUNG",
+      "Series": "Actualizar Tab S6 Lite",
+      "Modelo_año": 2022,
+      "Rango_de_edad_descripcion": "Adulto",
+      "Componentes_incluidos": [
+        "Cargador de pared/USB",
+        "Cable USB-A a USB-C",
+        "Guía de inicio rápido"
+      ],
+      "Número_de_modelo": "SM-P613NZIAXAR"
+    },
+
     "media": [
       {
         "url": "https://m.media-amazon.com/images/I/51hgmTJiu+L._AC_SX569_.jpg",

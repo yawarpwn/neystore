@@ -28,17 +28,8 @@ export function ProductCard({ product }) {
           <div>
             <Button className="h-6 w-16">Oferta</Button>
           </div>
-
           {/* Price */}
           <PriceProduct />
-
-          {/* Recommend Price */}
-          <div className="text-[11px] text-foreground/50">
-            <span>Precio recomendado</span>
-            <span className="ml-2 line-through text-foreground/80">
-              S/ 50.00
-            </span>
-          </div>
         </div>
       </Link>
     </div>

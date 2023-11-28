@@ -1,12 +1,50 @@
-export function PriceProduct({ price, offert }) {
+import { cn } from '@/lib/utils'
+export function PriceProduct({ price, offert, isBig = false }) {
   return (
-    <div className="inline-flex gap-2">
-      <span className="line-through text-lg text-red-600">-23 %</span>
-      <span className="">
-        <span className="text-xs relative -top-1">S/</span>
-        <span className="algin-top text-lg ">269</span>
-        <span className="text-xs relative -top-1">00</span>
-      </span>
-    </div>
+    <>
+      <div className={cn('inline-flex', isBig ? 'gap-4' : 'gap-2')}>
+        <span
+          className={cn(
+            'line-through  text-red-600',
+            isBig ? 'text-5xl' : 'text-lg',
+          )}
+        >
+          -23 %
+        </span>
+        <span className="">
+          <span
+            className={cn(
+              'relative ',
+              isBig ? 'text-xl -top-4' : 'text-xs -top-1',
+            )}
+          >
+            S/
+          </span>
+          <span className={cn('algin-top', isBig ? 'text-5xl' : 'text-xl')}>
+            {offert}
+          </span>
+          <span
+            className={cn(
+              'text-xs relative ',
+              isBig ? 'text-lg -top-4' : 'text-xs -top-1',
+            )}
+          >
+            00
+          </span>
+        </span>
+      </div>
+
+      <div
+        className={cn(
+          'text-[11px] text-foreground/50',
+          isBig ? 'text-base' : 'text-[11px]',
+        )}
+      >
+        <span>Precio recomendado</span>
+        <span className="ml-2 line-through text-foreground/50">
+          S/ {price}.00
+        </span>
+      </div>
+    </>
   )
 }

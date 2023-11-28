@@ -19,8 +19,8 @@ export function CarouselProduct({ media: assets }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null)
 
   return (
-    <>
-      <div className="swiper-container">
+    <div className="carousel-wrapper">
+      <div className="carousel-container">
         <Swiper
           style={{
             '--swiper-navigation-color': 'var(--primary)',
@@ -55,7 +55,6 @@ export function CarouselProduct({ media: assets }) {
           className="mySwiper"
         >
           {assets.map(({ type, url, cover }, index) => {
-            console.log(cover)
             if (type === 'image') {
               return (
                 <SwiperSlide key={index}>
@@ -76,6 +75,6 @@ export function CarouselProduct({ media: assets }) {
           })}
         </Swiper>
       </div>
-    </>
+    </div>
   )
 }
