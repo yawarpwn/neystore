@@ -4,7 +4,6 @@ import { ProductCard } from '@/components/ui/products/card'
 
 async function ProductPage() {
   const products = await fetchProducts()
-  console.log(products)
   return (
     <div className="container relative">
       <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))]">

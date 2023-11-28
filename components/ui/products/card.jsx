@@ -1,26 +1,14 @@
 import { Button } from '@/components/ui/button'
+import { RankingProduct } from './ranking'
+import { PriceProduct } from './price'
 import Link from 'next/link'
-import { StarIcon, StarFilledIcon } from '@radix-ui/react-icons'
-
-function Ranking({ ranking }) {
-  const TOTAL_STARS = 5
-  const Stars = Array.from({ length: TOTAL_STARS }, (_, index) => {
-    return index + 1 < ranking ? (
-      <StarFilledIcon className="w-3 h-3" />
-    ) : (
-      <StarIcon className="w-3 h-3" />
-    )
-  })
-
-  return <div className="flex gap-1 py-1">{Stars}</div>
-}
 
 export function ProductCard({ product }) {
   const { title, media, id, ranking } = product
   const imageSrc = media[0].url
   return (
     <div className="p-2">
-      <Link href={`/products/${id}`}>
+      <Link href={`/productos/${id}`}>
         {/* Image Card */}
         <div className="min-h-[200px] flex items-center justify-center text-center relative p-0 m-auto">
           <img src={imageSrc} className="p-2 relative z-10" />
@@ -34,7 +22,7 @@ export function ProductCard({ product }) {
           </div>
 
           {/* Ranking */}
-          <Ranking ranking={ranking} />
+          <RankingProduct ranking={ranking} />
 
           {/* Offert button  */}
           <div>
@@ -42,14 +30,7 @@ export function ProductCard({ product }) {
           </div>
 
           {/* Price */}
-          <div className="inline-flex gap-2">
-            <span className="line-through text-lg text-red-600">-23 %</span>
-            <span className="">
-              <span className="text-xs relative -top-1">S/</span>
-              <span className="algin-top text-lg ">269</span>
-              <span className="text-xs relative -top-1">00</span>
-            </span>
-          </div>
+          <PriceProduct />
 
           {/* Recommend Price */}
           <div className="text-[11px] text-foreground/50">
