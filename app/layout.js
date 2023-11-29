@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils'
 import './globals.css'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
+import { WhatsappPop } from '@/components/whatsapp-pop'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
           <SiteHeader />
           <div className="flex-1">{children}</div>
           <SiteFooter />
+          <WhatsappPop />
         </div>
       </body>
     </html>

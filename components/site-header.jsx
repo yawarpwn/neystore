@@ -9,6 +9,7 @@ import { ModeToggle } from '@/components/mode-toggle'
 import { buttonVariants } from '@/components/ui/button'
 import { FaceIcon } from '@radix-ui/react-icons'
 import { FacebookIcon } from 'lucide-react'
+import { Logo } from './logo'
 
 export function SiteHeader() {
   return (
@@ -23,7 +24,7 @@ export function SiteHeader() {
           <nav className="flex items-center">
             <Link
               // href={siteConfig.links.github}
-              href={'/'}
+              href={'#'}
               target="_blank"
               rel="noreferrer"
             >
@@ -39,7 +40,7 @@ export function SiteHeader() {
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>
-            <Link href={'/'} target="_blank" rel="noreferrer">
+            <Link href={'#'} target="_blank" rel="noreferrer">
               <div
                 className={cn(
                   buttonVariants({
@@ -52,7 +53,7 @@ export function SiteHeader() {
                 <span className="sr-only">TikTok</span>
               </div>
             </Link>
-            <ModeToggle />
+            {/* <ModeToggle /> */}
           </nav>
         </div>
       </div>

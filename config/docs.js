@@ -6,11 +6,11 @@ export const docsConfig = {
     },
     {
       title: 'Contacto',
-      href: 'contacto',
+      href: '#',
     },
     {
       title: 'Nosotros',
-      href: '/nosotros',
+      href: '#',
     },
   ],
 }

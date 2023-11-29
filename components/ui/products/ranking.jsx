@@ -5,9 +5,9 @@ export function RankingProduct({ ranking, isBig }) {
   const TOTAL_STARS = 5
   const Stars = Array.from({ length: TOTAL_STARS }, (_, index) => {
     return index + 1 < ranking ? (
-      <StarFilledIcon className={cn(isBig ? 'w-6 h-6' : 'w-3 h-3')} />
+      <StarFilledIcon className={cn(isBig ? 'w-6 h-6' : 'w-4 h-4')} />
     ) : (
-      <StarIcon className={cn(isBig ? 'w-6 h-6' : 'w-3 h-3')} />
+      <StarIcon className={cn(isBig ? 'w-6 h-6' : 'w-4 h-4')} />
     )
   })
 
