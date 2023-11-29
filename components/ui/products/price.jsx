@@ -1,5 +1,11 @@
 import { cn } from '@/lib/utils'
 export function PriceProduct({ price, offert, isBig = false }) {
+  const getDiscountPercentage = ({ price, offert }) => {
+    return Math.round(((price - offert) / price) * 100)
+  }
+
+  const discoucountPercent = getDiscountPercentage({ price, offert })
+
   return (
     <>
       <div className={cn('inline-flex', isBig ? 'gap-4' : 'gap-2')}>
@@ -9,7 +15,7 @@ export function PriceProduct({ price, offert, isBig = false }) {
             isBig ? 'text-5xl' : 'text-lg',
           )}
         >
-          -23 %
+          -{discoucountPercent} %
         </span>
         <span className="">
           <span

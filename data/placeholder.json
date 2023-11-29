@@ -89,10 +89,10 @@
 
   {
     "id": "zzjofhz_2",
-    "title": "SAMSUNG Galaxy Tab S6 Lite - Tablet Android de 10.4 pulgadas y 64 GB, S Pen incluido, diseño delgado de metal, altavoces dobles AKG, batería de larga duración, versión estadounidense, 2022, rosa de gasa",
-    "price": 100,
-    "offert": 800,
-    "ranking": 5,
+    "title": "Consola de empuje rápido con retroalimentación instantánea de sonido | Juego de empuje rápido de mano | Juguete sensorial educativo interactivo Pop The Target para niños y adultos | Regalo divertido para niños de 3 a 12 años",
+    "price": 80,
+    "offert": 70,
+    "ranking": 3,
     "description": [
       "S PEN INCLUIDO: El S Pen incluido hace que sea más fácil que nunca escribir notas y personalizar fotos y videos, todo sin necesidad de cargar. El S Pen se fija magnéticamente directamente a su tableta y siempre está listo para usar.",
       "Diseño delgado de metal: lleva esta tableta elegante y ligera a cualquier lugar. Su diseño delgado se desliza directamente en tu bolso y viene en tu elección de colores elegantes.",
@@ -102,46 +102,29 @@
       "EXPERIENCIA DEX: Haga más cada día convirtiendo sus dispositivos Galaxy en una estación de trabajo de escritorio ampliada. Envía varias ventanas a los dispositivos de tu elección y controlas todas desde tu Galaxy Tab S6 Lite como un jefe.²",
       "¹El consumo de energía de la batería depende de los patrones de uso. Los resultados pueden variar. ²DeX estará disponible en R OS o superior."
     ],
-    "characteristics": {
-      "Nombre del modelo": "Actualizar Tab S6 Lite",
-      "Capacidad de almacenamiento de memoria": "64 GB",
-      "Tamaño de pantalla": "10,4 Pulgadas",
-      "Resolución Máxima de Pantalla": "2000 x 1200 Píxeles"
-    },
+    "descriptions": [
+      "Juego interactivo multimodo: nuestra consola de juegos portátil, la Speed Push Pop, ofrece cuatro modos de juego divertidos: modo de escenario, modo de memoria, modo de puntuación y modo multijugador. Cada modo proporciona una forma única de jugar y disfrutar del juego, y el diseño de forma única de la consola lo convierte en un excelente juego de rompecabezas y herramienta de descompresión tanto para niños como para adultos.",
+      "Materiales y mano de obra de primera calidad: los materiales y la mano de obra de alta calidad de la consola de juegos no solo garantizan durabilidad y resistencia a los daños, sino que también garantizan largas horas de juego. Los botones son altamente sensibles, lo que hace que el juego sea fácil de jugar y controlar.",
+      "Diseño minimalista: cuenta con solo cuatro botones: sonido, potencia, modo de interruptor, y todo el botón elevado en la parte posterior es el botón de confirmación. El juego pop está equipado con un dispositivo sensor, y los jugadores solo necesitan apagar las luces en sucesión presionando los pops, y luego presionar el botón de confirmación en la parte posterior. El funcionamiento es simple, fácil de aprender y perfecto para todas las edades.",
+      "Diversión y entretenimiento | ¡Abierto para jugar! Con todos los accesorios están incluidos! Nuestro juego de burbujas puede mantener a los niños comprometidos y entretenidos durante horas, ayudando eficazmente a reducir el tiempo frente a la pantalla y vencer el aburrimiento, mientras que también sirve como un alivio del estrés para adultos. Un buen ayudante para aliviar el trabajo, el estudio, la familia, el estrés de la oficina y generar felicidad.",
+      "UNA CONECTIVIDAD DE UI: Sincroniza varios dispositivos y dobla tus todos con Galaxy Tab S6 Lite. Úselo como punto de acceso y cree contenido listo para compartir a la vez.",
+      "Compacta y portátil: con dimensiones de 5.1 x 3.9 x 2.3 pulgadas y un diseño ligero, esta consola de juegos portátil es un compañero de viaje ideal que puede acompañar fácilmente a los padres y a sus hijos sobre la marcha, asegurando un sinfín de horas de diversión y entretenimiento."
+    ],
     "details": {
-      "Capacidad de almacenamiento de memoria": "64 GB",
-      "Sistema operativo": "Android",
+      "Dimensiones del producto": "5 x 8 x 3 pulgadas",
+      "País de origen": "China",
       "Tamaño de la memoria RAM instalada": "4 GB",
-      "Características especiales": ["Lightweight", "Carga Rápida"],
-      "Interfaz de hardware": "Bluetooth",
+      "Edad recomendada por el fabricante": "3 años y más",
       "Ranuras de memoria disponibles": 34,
-      "Entrada de interfaz humana": "Pantalla táctil con soporte para lápiz óptico",
-      "Descripción de la tarjeta": "Integrado",
-      "Potencia de la batería": "7040 Modificador desconocido",
-      "Composición de las celdas de la batería": "Polímero de Litio",
-      "Contenido de energía de la batería de litio": "27,11 Vatios-hora",
-      "Resolución de la cámara posterior": "8 MP",
-      "Resolución del sensor fotográfico frontal": "5 MP",
-      "Otras características de la cámara": ["Parte Posterior", "Frente"],
-      "Resolución del sensor fotográfico": "5 MP",
-      "Tecnología de comunicación inalámbrica": "Bluetooth",
-      "Tecnología celular": "Wi-Fi",
-      "Total de Puertos USB": 1,
-      "Tecnología de conectividad": ["Bluetooth", "wifi", "USB"],
-      "Tipo de conexión inalámbrica": "802.11a",
-      "Tamaño de pantalla": "10,4 Pulgadas",
-      "Resolución Máxima de Pantalla": "2000 x 1200 Píxeles",
-      "Tipo de pantalla": "LCD",
-      "Fabricante de CPU": "Qualcomm",
-      "Velocidad de la CPU": "2,3 GHz"
+      "Fabricante": "OAKTECH"
     },
     "media": [
       {
-        "url": "https://m.media-amazon.com/images/I/51hgmTJiu+L._AC_SX569_.jpg",
+        "url": "https://m.media-amazon.com/images/I/716m54pQqCL._AC_SX425_.jpg",
         "type": "image"
       },
       {
-        "url": "https://m.media-amazon.com/images/I/51hgmTJiu+L._AC_SX569_.jpg",
+        "url": "https://m.media-amazon.com/images/I/71WmyJGz1mL._AC_SY355_.jpg",
         "type": "image"
       },
 
@@ -163,55 +146,29 @@
 
   {
     "id": "zzjofhz_3",
-    "title": "SAMSUNG Galaxy Tab S6 Lite - Tablet Android de 10.4 pulgadas y 64 GB, S Pen incluido, diseño delgado de metal, altavoces dobles AKG, batería de larga duración, versión estadounidense, 2022, rosa de gasa",
+    "title": "Pistolas de burbujas para niños pequeños, máquina de burbujas de 12 agujeros con luces LED, diseño a prueba de fugas de 360° para fiesta de cumpleaños, juguetes de verano al aire libre para niños de 4 a 8 años (azul)",
     "price": 100,
     "offert": 800,
     "ranking": 5,
-    "description": [
-      "S PEN INCLUIDO: El S Pen incluido hace que sea más fácil que nunca escribir notas y personalizar fotos y videos, todo sin necesidad de cargar. El S Pen se fija magnéticamente directamente a su tableta y siempre está listo para usar.",
-      "Diseño delgado de metal: lleva esta tableta elegante y ligera a cualquier lugar. Su diseño delgado se desliza directamente en tu bolso y viene en tu elección de colores elegantes.",
-      "LISTO PARA EL ENTRETENIMIENTO: Una pantalla vívida y nítida te atrae al contenido, mientras que los altavoces duales con sonido AKG proporcionan un amplio sonido envolvente Dolby Atmos. Con el descubrimiento impulsado por Spotify, establecer una banda sonora personal para tus momentos de vigilia nunca ha sido tan fácil.",
-      "BATERÍA DE LARGA DURACIÓN: Una batería de larga duración le permite transmitir hasta 12 horas¹ con una sola carga. El puerto USB-C de carga rápida le permite volver rápidamente a donde lo dejó cuando necesita recargar.",
+    "descriptions": [
+      "Juego interactivo multimodo: nuestra consola de juegos portátil, la Speed Push Pop, ofrece cuatro modos de juego divertidos: modo de escenario, modo de memoria, modo de puntuación y modo multijugador. Cada modo proporciona una forma única de jugar y disfrutar del juego, y el diseño de forma única de la consola lo convierte en un excelente juego de rompecabezas y herramienta de descompresión tanto para niños como para adultos.",
+      "Materiales y mano de obra de primera calidad: los materiales y la mano de obra de alta calidad de la consola de juegos no solo garantizan durabilidad y resistencia a los daños, sino que también garantizan largas horas de juego. Los botones son altamente sensibles, lo que hace que el juego sea fácil de jugar y controlar.",
+      "Diseño minimalista: cuenta con solo cuatro botones: sonido, potencia, modo de interruptor, y todo el botón elevado en la parte posterior es el botón de confirmación. El juego pop está equipado con un dispositivo sensor, y los jugadores solo necesitan apagar las luces en sucesión presionando los pops, y luego presionar el botón de confirmación en la parte posterior. El funcionamiento es simple, fácil de aprender y perfecto para todas las edades.",
+      "Diversión y entretenimiento | ¡Abierto para jugar! Con todos los accesorios están incluidos! Nuestro juego de burbujas puede mantener a los niños comprometidos y entretenidos durante horas, ayudando eficazmente a reducir el tiempo frente a la pantalla y vencer el aburrimiento, mientras que también sirve como un alivio del estrés para adultos. Un buen ayudante para aliviar el trabajo, el estudio, la familia, el estrés de la oficina y generar felicidad.",
       "UNA CONECTIVIDAD DE UI: Sincroniza varios dispositivos y dobla tus todos con Galaxy Tab S6 Lite. Úselo como punto de acceso y cree contenido listo para compartir a la vez.",
-      "EXPERIENCIA DEX: Haga más cada día convirtiendo sus dispositivos Galaxy en una estación de trabajo de escritorio ampliada. Envía varias ventanas a los dispositivos de tu elección y controlas todas desde tu Galaxy Tab S6 Lite como un jefe.²",
-      "¹El consumo de energía de la batería depende de los patrones de uso. Los resultados pueden variar. ²DeX estará disponible en R OS o superior."
+      "Compacta y portátil: con dimensiones de 5.1 x 3.9 x 2.3 pulgadas y un diseño ligero, esta consola de juegos portátil es un compañero de viaje ideal que puede acompañar fácilmente a los padres y a sus hijos sobre la marcha, asegurando un sinfín de horas de diversión y entretenimiento."
     ],
-    "characteristics": {
-      "Nombre del modelo": "Actualizar Tab S6 Lite",
-      "Capacidad de almacenamiento de memoria": "64 GB",
-      "Tamaño de pantalla": "10,4 Pulgadas",
-      "Resolución Máxima de Pantalla": "2000 x 1200 Píxeles"
-    },
     "details": {
-      "Capacidad de almacenamiento de memoria": "64 GB",
-      "Sistema operativo": "Android",
+      "Dimensiones del producto": "5 x 8 x 3 pulgadas",
+      "País de origen": "China",
       "Tamaño de la memoria RAM instalada": "4 GB",
-      "Características especiales": ["Lightweight", "Carga Rápida"],
-      "Interfaz de hardware": "Bluetooth",
+      "Edad recomendada por el fabricante": "3 años y más",
       "Ranuras de memoria disponibles": 34,
-      "Entrada de interfaz humana": "Pantalla táctil con soporte para lápiz óptico",
-      "Descripción de la tarjeta": "Integrado",
-      "Potencia de la batería": "7040 Modificador desconocido",
-      "Composición de las celdas de la batería": "Polímero de Litio",
-      "Contenido de energía de la batería de litio": "27,11 Vatios-hora",
-      "Resolución de la cámara posterior": "8 MP",
-      "Resolución del sensor fotográfico frontal": "5 MP",
-      "Otras características de la cámara": ["Parte Posterior", "Frente"],
-      "Resolución del sensor fotográfico": "5 MP",
-      "Tecnología de comunicación inalámbrica": "Bluetooth",
-      "Tecnología celular": "Wi-Fi",
-      "Total de Puertos USB": 1,
-      "Tecnología de conectividad": ["Bluetooth", "wifi", "USB"],
-      "Tipo de conexión inalámbrica": "802.11a",
-      "Tamaño de pantalla": "10,4 Pulgadas",
-      "Resolución Máxima de Pantalla": "2000 x 1200 Píxeles",
-      "Tipo de pantalla": "LCD",
-      "Fabricante de CPU": "Qualcomm",
-      "Velocidad de la CPU": "2,3 GHz"
+      "Fabricante": "OAKTECH"
     },
     "media": [
       {
-        "url": "https://m.media-amazon.com/images/I/51hgmTJiu+L._AC_SX569_.jpg",
+        "url": "https://m.media-amazon.com/images/I/71PNPyzburL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
         "type": "image"
       },
       {
@@ -237,7 +194,7 @@
 
   {
     "id": "zzjofhz_4",
-    "title": "SAMSUNG Galaxy Tab S6 Lite - Tablet Android de 10.4 pulgadas y 64 GB, S Pen incluido, diseño delgado de metal, altavoces dobles AKG, batería de larga duración, versión estadounidense, 2022, rosa de gasa",
+    "title": "Vilalatfan Busy Cube - Juguetes de viaje para niños, tablero de madera para autismo, juguete sensorial para niños pequeños, juguetes de aprendizaje, juguetes Montessori, cubo de actividad, juguetes para niños con autismo y TDAH de 1 a 8 años",
     "price": 100,
     "offert": 800,
     "ranking": 5,
@@ -285,7 +242,7 @@
     },
     "media": [
       {
-        "url": "https://m.media-amazon.com/images/I/51hgmTJiu+L._AC_SX569_.jpg",
+        "url": "https://m.media-amazon.com/images/I/71ZuGAxZPiL._AC_SY355_.jpg",
         "type": "image"
       },
       {
@@ -311,7 +268,7 @@
 
   {
     "id": "zzjofhz_5",
-    "title": "SAMSUNG Galaxy Tab S6 Lite - Tablet Android de 10.4 pulgadas y 64 GB, S Pen incluido, diseño delgado de metal, altavoces dobles AKG, batería de larga duración, versión estadounidense, 2022, rosa de gasa",
+    "title": "KOKODI Tableta de escritura LCD, tableta de dibujo colorida de 10 pulgadas, almohadillas de dibujo electrónicas reutilizables borrables, juguete educativo y de aprendizaje para niños y niñas de 3 a 6 años",
     "price": 100,
     "offert": 800,
     "ranking": 5,
@@ -359,7 +316,7 @@
     },
     "media": [
       {
-        "url": "https://m.media-amazon.com/images/I/51hgmTJiu+L._AC_SX569_.jpg",
+        "url": "https://m.media-amazon.com/images/I/71JXJ0I9e-L._AC_SY355_.jpg",
         "type": "image"
       },
       {
@@ -385,7 +342,7 @@
 
   {
     "id": "zzjofhz_6",
-    "title": "SAMSUNG Galaxy Tab S6 Lite - Tablet Android de 10.4 pulgadas y 64 GB, S Pen incluido, diseño delgado de metal, altavoces dobles AKG, batería de larga duración, versión estadounidense, 2022, rosa de gasa",
+    "title": "Keychron V1 QMK/VIA - Teclado mecánico con cable personalizado, marco programable con diseño del 75% con interruptor marrón K Pro intercambiable en caliente, teclas PBT, teclado retroiluminado RGB para Mac Windows Linux, translúcido",
     "price": 100,
     "offert": 800,
     "ranking": 5,
@@ -433,7 +390,7 @@
     },
     "media": [
       {
-        "url": "https://m.media-amazon.com/images/I/51hgmTJiu+L._AC_SX569_.jpg",
+        "url": "https://m.media-amazon.com/images/I/61ImxnvtwiL._AC_SX425_.jpg",
         "type": "image"
       },
       {

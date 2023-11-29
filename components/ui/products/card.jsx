@@ -4,15 +4,19 @@ import { PriceProduct } from './price'
 import Link from 'next/link'
 
 export function ProductCard({ product }) {
-  const { title, media, id, ranking } = product
+  const { title, media, id, ranking, price, offert } = product
+
   const imageSrc = media[0].url
   return (
     <div className="p-2">
       <Link href={`/productos/${id}`}>
         {/* Image Card */}
-        <div className="min-h-[200px] flex items-center justify-center text-center relative p-0 m-auto">
-          <img src={imageSrc} className="p-2 relative z-10" />
-          <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-gray-200 to-gray-50"></div>
+        <div className="h-0 pb-[100%] relative mb-2.5">
+          <img
+            src={imageSrc}
+            className="absolute inset-0 z-10 object-contain w-full h-full p-2"
+          />
+          <div className="absolute inset-0 w-full bg-[rgba(15_17_17/0.01)] rounded-[8px]"></div>
         </div>
         {/* Info Card */}
         <div className="flex flex-col gap-1">
@@ -29,7 +33,7 @@ export function ProductCard({ product }) {
             <Button className="h-6 w-16">Oferta</Button>
           </div>
           {/* Price */}
-          <PriceProduct />
+          <PriceProduct price={price} offert={offert} />
         </div>
       </Link>
     </div>
