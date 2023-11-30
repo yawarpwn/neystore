@@ -8,7 +8,11 @@ async function ProductPage({ params }) {
   return (
     <main className="container px-4">
       <div className="grid grid-cols-1 gap-4  lg:grid-cols-2 mt-4">
-        <CarouselProduct media={product.media} />
+        <CarouselProduct
+          title={product.title}
+          images={product.media}
+          video={product?.video}
+        />
         <InfoProduct product={product} />
         {product.infoProduct && <MoreInfoProduct product={product} />}
       </div>

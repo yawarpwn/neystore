@@ -68,13 +68,14 @@
       {
         "url": "https://m.media-amazon.com/images/I/61cFm5eRcdL._AC_SX425_.jpg",
         "type": "image"
-      },
-      {
-        "url": "https://www.youtube.com/watch?v=S-Dh-0bpDDQ",
-        "type": "video",
-        "cover": "https://m.media-amazon.com/images/I/8145xmOlSdL.SS40_BG85,85,85_BR-120_PKdp-play-icon-overlay__.jpg"
       }
-    ]
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=S-Dh-0bpDDQ&t=304s",
+      "cover": "https://m.media-amazon.com/images/I/710KPhhH2vL._AC_SX425_.jpg",
+      "type": "video",
+      "provider": "youtube"
+    }
   },
 
   {
@@ -108,7 +109,13 @@
         "url": "https://m.media-amazon.com/images/I/71WmyJGz1mL._AC_SY355_.jpg",
         "type": "image"
       }
-    ]
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=HVphB6RYBaY&t=21s",
+      "cover": "https://m.media-amazon.com/images/I/710KPhhH2vL._AC_SX425_.jpg",
+      "type": "video",
+      "provider": "youtube"
+    }
   },
 
   {
@@ -148,13 +155,13 @@
       {
         "url": "https://m.media-amazon.com/images/I/71dkIN6lysL._AC_SX425_.jpg",
         "type": "image"
-      },
-
-      {
-        "url": "https://www.youtube.com/watch?v=S-Dh-0bpDDQ",
-        "type": "video"
       }
-    ]
+    ],
+    "video": {
+      "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/c5817bd7-6bd3-4850-8bcf-315a60687fca/default.jobtemplate.mp4.480.mp4",
+      "type": "video",
+      "cover": "https://m.media-amazon.com/images/I/71PNPyzburL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+    }
   },
 
   {
@@ -197,7 +204,11 @@
         "url": "https://www.youtube.com/watch?v=S-Dh-0bpDDQ",
         "type": "video"
       }
-    ]
+    ],
+    "video": {
+      "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/934a2415-6186-41a9-ac21-119f69d09ad9/default.jobtemplate.mp4.480.mp4",
+      "type": "video"
+    }
   },
 
   {
@@ -243,7 +254,11 @@
         "url": "https://www.youtube.com/watch?v=S-Dh-0bpDDQ",
         "type": "video"
       }
-    ]
+    ],
+    "video": {
+      "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/08f547b7-197b-4e55-a299-a0cccaaa130f/default.jobtemplate.mp4.480.mp4",
+      "type": "video"
+    }
   },
 
   {
@@ -292,6 +307,12 @@
         "type": "video",
         "cover": "https://m.media-amazon.com/images/I/710KPhhH2vL._AC_SX425_.jpg"
       }
-    ]
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=HVphB6RYBaY&t=21s",
+      "cover": "https://m.media-amazon.com/images/I/710KPhhH2vL._AC_SX425_.jpg",
+      "type": "video",
+      "provider": "youtube"
+    }
   }
 ]
