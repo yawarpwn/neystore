@@ -3,6 +3,10 @@ import { fetchProducts } from '@/lib/products'
 import { ProductCard } from '@/components/ui/products/card'
 import { Breadcrumbs } from '@/components/ui/breadcrumbs'
 
+export const metadata = {
+  title: 'Productos',
+}
+
 async function ProductPage() {
   const products = await fetchProducts()
   return (

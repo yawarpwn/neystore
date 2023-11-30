@@ -4,6 +4,15 @@ import { InfoProduct } from '@/components/ui/products/info'
 import { MoreInfoProduct } from '@/components/ui/products/more-info'
 import { Breadcrumbs } from '@/components/ui/breadcrumbs/index'
 
+export async function generateMetadata({ params }) {
+  const product = await fetchProductById({ id: params.id })
+
+  return {
+    title: product.title,
+    description: product.title,
+  }
+}
+
 async function ProductPage({ params }) {
   const product = await fetchProductById({ id: params.id })
   return (
