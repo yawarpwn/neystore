@@ -70,7 +70,7 @@ function Card({ member }) {
   const whatsappLink = `https://wa.me/${phone}?text=Hola ${firstName}, vengo de la pagina. Estoy interesando en:`
   return (
     <a
-      className="wp__card flex items-center gap-4 p-2 hover:bg-white hover:shadow-sm rounded-sm cursor-pointer"
+      className="wp__card flex items-center gap-4 p-2 hover:bg-white/60 hover:shadow-sm rounded-sm cursor-pointer transition"
       href={whatsappLink}
       target="_blank"
     >

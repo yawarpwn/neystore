@@ -3,20 +3,25 @@ import { CarouselProduct } from '@/components/ui/products/carousel'
 import { InfoProduct } from '@/components/ui/products/info'
 import { MoreInfoProduct } from '@/components/ui/products/more-info'
 import { Breadcrumbs } from '@/components/ui/breadcrumbs/index'
+import { GenericInfo } from '@/components/ui/products/generic-info'
 
 export async function generateMetadata({ params }) {
-  const product = await fetchProductById({ id: params.id })
+  const product = await fetchProductById({ slug: params.slug })
+
+  const [title] = product.title.split(',')
+  const description = product.title
 
   return {
-    title: product.title,
-    description: product.title,
+    title,
+    description,
   }
 }
 
 async function ProductPage({ params }) {
-  const product = await fetchProductById({ id: params.id })
+  const product = await fetchProductById({ slug: params.slug })
+  const formatedtitle = product.slug.replace(/-/g, ' ')
   return (
-    <main className="container px-4">
+    <main className="container flex flex-col gap-4 px-4 overflow-x-hidden">
       <Breadcrumbs
         breadcrumbs={[
           {
@@ -24,12 +29,12 @@ async function ProductPage({ params }) {
             href: '/',
           },
           {
-            title: 'Products',
+            title: 'Productos',
             href: '/productos',
           },
           {
-            title: 'Product',
-            href: product.id,
+            title: formatedtitle,
+            href: product.slug,
             active: true,
           },
         ]}
@@ -43,6 +48,7 @@ async function ProductPage({ params }) {
         <InfoProduct product={product} />
         {product.infoProduct && <MoreInfoProduct product={product} />}
       </div>
+      <GenericInfo />
     </main>
   )
 }

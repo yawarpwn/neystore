@@ -18,7 +18,7 @@ async function ProductPage() {
             href: '/',
           },
           {
-            title: 'Products',
+            title: 'Productos',
             href: '/productos',
             active: true,
           },

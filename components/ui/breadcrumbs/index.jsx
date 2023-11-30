@@ -9,7 +9,9 @@ export function Breadcrumbs({ breadcrumbs }) {
           {breadcrumbs.map(({ title, href, active }) => (
             <li className={active ? 'font-bold' : ''} key={href}>
               <span>
-                <Link href={href}>{title}</Link>
+                <Link className="truncate" href={href}>
+                  {title}
+                </Link>
               </span>
             </li>
           ))}

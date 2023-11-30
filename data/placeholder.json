@@ -6,6 +6,7 @@
     "offert": 700,
     "cost": 650,
     "ranking": 5,
+    "slug": "samsung-galaxy-tab-s6-lite",
     "info": {
       "Marca": "SAMSUNG",
       "Nombre del modelo": "Actualizar Tab S6 Lite",
@@ -84,6 +85,7 @@
     "price": 80,
     "offert": 70,
     "ranking": 3,
+    "slug": "consola-de-empuje-rapido-con-retroalimentacion-instantanea-de-sonido",
     "cost": 57,
     "info": {
       "Dimensiones del producto": "5 x 8 x 3 pulgadas",
@@ -125,6 +127,7 @@
     "offert": 60,
     "cost": 35,
     "ranking": 4,
+    "slug": "pistolas-de-burbujas-para-ninos-pequenos",
     "info": {
       "Dimensiones del producto": "7,2 x 7 x 7 pulgadas",
       "País de origen": "China",
@@ -171,6 +174,7 @@
     "offert": 80,
     "cost": 50,
     "ranking": 5,
+    "slug": "vilalatfan-busy-cube",
     "descriptions": [
       "Los juguetes sensoriales de cubo ocupado incluyen: los juguetes sensoriales están meticulosamente hechos de madera de calidad con bordes lijados suavemente y pintura no tóxica. Este cubo de actividad de madera de calidad incluye giroscopio de la punta de los dedos, cerradura de seguridad antirrobo y llave, perno de resorte, interruptor, rueda universal, grifo de agua y tapón de rosca giratorio. Los 6 lados del juego fomentan el descubrimiento y la exploración, cultiva la capacidad cognitiva, la atención y el aprendizaje de los niños.",
       "Juguetes educativos Montessori de aprendizaje: estos cubos de actividad son grandes juguetes Montessori que pueden mejorar la capacidad práctica y ayuda a los niños a desarrollar habilidades motoras finas. Ayuda a los bebés a practicar la coordinación mano-ojo utilizando desafíos del mundo real. O simplemente dale tiempo tranquilo para centrarse en las actividades de aprendizaje natural. Nuestros juguetes fomentan la imaginación para ayudar a mejorar la concentración y la memoria, todo mientras se centran en las importantes habilidades de desarrollo que tu hijo necesita dominar",
@@ -207,7 +211,8 @@
     ],
     "video": {
       "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/934a2415-6186-41a9-ac21-119f69d09ad9/default.jobtemplate.mp4.480.mp4",
-      "type": "video"
+      "type": "video",
+      "cover": "https://m.media-amazon.com/images/I/91P3yTN-mpL.png"
     }
   },
 
@@ -218,6 +223,7 @@
     "offert": 80,
     "cost": 70,
     "ranking": 3,
+    "slug": "tableta-de-escritura-lcd",
     "info": {
       "Dimensiones del producto": "9,8 x 6,9 x 0,24 pulgadas",
       "País de origen": "China",
@@ -257,7 +263,8 @@
     ],
     "video": {
       "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/08f547b7-197b-4e55-a299-a0cccaaa130f/default.jobtemplate.mp4.480.mp4",
-      "type": "video"
+      "type": "video",
+      "cover": "https://m.media-amazon.com/images/I/91P3yTN-mpL.png"
     }
   },
 
@@ -267,6 +274,7 @@
     "price": 300,
     "offert": 260,
     "ranking": 5,
+    "slug": "keychron-v1-qmkvia",
     "cost": 228,
     "info": {
       "Marca": "Keychron",
@@ -310,7 +318,7 @@
     ],
     "video": {
       "url": "https://www.youtube.com/watch?v=HVphB6RYBaY&t=21s",
-      "cover": "https://m.media-amazon.com/images/I/710KPhhH2vL._AC_SX425_.jpg",
+      "cover": "https://m.media-amazon.com/images/I/91P3yTN-mpL.png",
       "type": "video",
       "provider": "youtube"
     }

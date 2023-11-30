@@ -4,12 +4,12 @@ import { PriceProduct } from './price'
 import Link from 'next/link'
 
 export function ProductCard({ product }) {
-  const { title, media, id, ranking, price, offert } = product
+  const { title, media, id, ranking, price, offert, slug } = product
 
   const imageSrc = media[0].url
   return (
     <div className="p-2">
-      <Link href={`/productos/${id}`}>
+      <Link href={`/productos/${slug}`}>
         {/* Image Card */}
         <div className="h-0 pb-[100%] relative mb-2.5">
           <img
