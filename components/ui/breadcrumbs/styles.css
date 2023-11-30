@@ -1,0 +1,25 @@
+.breadcrumbs {
+  & > ul {
+    display: flex;
+    align-items: center;
+    min-height: min-content;
+    white-space: nowrap;
+  }
+
+  & > ul > li {
+    display: flex;
+    align-items: center;
+  }
+  & > ul > li + *:before {
+    content: '';
+    margin-left: 0.5rem;
+    margin-right: 0.7rem;
+    display: block;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    background: transparent;
+    transform: rotate(45deg);
+  }
+}
