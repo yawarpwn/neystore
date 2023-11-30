@@ -7,7 +7,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 // Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/free-mode'
-import 'swiper/css/navigation'
 import 'swiper/css/thumbs'
 
 import './carousel.css'
@@ -23,6 +22,7 @@ export function CarouselProduct({ images, video, title }) {
     <>
       <div className="carousel-wrapper">
         <div className="carousel-container">
+          {/* Main Swiper */}
           <Swiper
             style={{
               '--swiper-navigation-color': 'var(--primary)',
@@ -30,7 +30,6 @@ export function CarouselProduct({ images, video, title }) {
               '--swiper-navigation-size': '25px',
             }}
             spaceBetween={10}
-            navigation={true}
             thumbs={{ swiper: thumbsSwiper }}
             modules={[FreeMode, Navigation, Thumbs]}
             className="main-swiper"
@@ -45,6 +44,8 @@ export function CarouselProduct({ images, video, title }) {
               }
             })}
           </Swiper>
+
+          {/* Thumbs Swiper */}
           <div className="thumbs-container">
             <Swiper
               onSwiper={setThumbsSwiper}
