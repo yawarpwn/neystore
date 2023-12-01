@@ -1,79 +1,59 @@
 'use client'
 
-import React, { useRef, useState } from 'react'
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { ProductCard } from './card'
 
 // Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/free-mode'
 import 'swiper/css/thumbs'
+import 'swiper/css/navigation'
 
-import './carousel.css'
+import { FreeMode, Navigation, Pagination } from 'swiper/modules'
 
-// import required modules
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules'
-import { VideoModal } from './video-modal'
-
-export function CarouselProduct({ images, video, title }) {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null)
-
+export function CarouselProducts({
+  products,
+  title = 'Title Carousel Section',
+}) {
   return (
-    <>
-      <div className="carousel-wrapper">
-        <div className="carousel-container">
-          {/* Main Swiper */}
-          <Swiper
-            style={{
-              '--swiper-navigation-color': 'var(--primary)',
-              '--swiper-pagination-color': 'var(--primary)',
-              '--swiper-navigation-size': '25px',
-            }}
-            spaceBetween={10}
-            thumbs={{ swiper: thumbsSwiper }}
-            modules={[FreeMode, Navigation, Thumbs]}
-            className="main-swiper"
-          >
-            {images.map(({ type, url }, index) => {
-              if (type === 'image') {
-                return (
-                  <SwiperSlide key={index}>
-                    <img src={url} alt={title} />
-                  </SwiperSlide>
-                )
-              }
-            })}
-          </Swiper>
-
-          {/* Thumbs Swiper */}
-          <div className="thumbs-container">
-            <Swiper
-              onSwiper={setThumbsSwiper}
-              spaceBetween={10}
-              slidesPerView={4}
-              freeMode={true}
-              watchSlidesProgress={true}
-              modules={[FreeMode, Navigation, Thumbs]}
-              className="thumbs-swiper"
-            >
-              {images.map(({ type, url }, index) => {
-                return (
-                  <SwiperSlide key={index}>
-                    <div className="thumbs-image-container">
-                      <img src={url} alt={`thumbnail ${title}`} />
-                    </div>
-                  </SwiperSlide>
-                )
-              })}
-            </Swiper>
-            {video && (
-              <div className="video-container">
-                <VideoModal video={video} title={title} />
-              </div>
-            )}
-          </div>
-        </div>
+    <section>
+      <div className="bg-gradient-to-r from-[#5700AA] via-[#C2009C] to-[#FD4B21] p-4 rounded">
+        <h3 className="text-xl md:text-2xl text-white text-center font-bold">
+          {title}
+        </h3>
       </div>
-    </>
+      <Swiper
+        style={{
+          '--swiper-navigation-color': 'hsla(var(--primary)/1)',
+          '--swiper-pagination-color': 'hsla(var(--primary)/1)',
+          '--swiper-navigation-size': '25px',
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 4,
+          },
+          1024: {
+            slidesPerView: 6,
+          },
+        }}
+        spaceBetween={5}
+        slidesPerView={2}
+        freeMode={true}
+        watchSlidesProgress={true}
+        modules={[FreeMode, Navigation]}
+        navigation
+      >
+        {products.map((product) => {
+          return (
+            <SwiperSlide key={product.id}>
+              <ProductCard product={product} />
+            </SwiperSlide>
+          )
+        })}
+      </Swiper>
+    </section>
   )
 }

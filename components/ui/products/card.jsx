@@ -29,7 +29,7 @@ export function ProductCard({ product }) {
           <RankingProduct ranking={ranking} />
 
           {/* Offert button  */}
-          <div>
+          <div className="flex justify-start ">
             <Button className="h-6 w-16">Oferta</Button>
           </div>
           {/* Price */}
