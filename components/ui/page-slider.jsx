@@ -12,23 +12,18 @@ import 'swiper/css/scrollbar'
 
 const images = [
   {
-    mobile: '/assets/images/banner-1-mobile.webp',
-    desktop: '/assets/images/banner-1-desktop.webp',
+    mobile: '/assets/images/banner-juguetes-mobile.webp',
+    desktop: '/assets/images/banner-juguetes-desktop.webp',
   },
 
   {
-    mobile: '/assets/images/banner-1-mobile.webp',
-    desktop: '/assets/images/banner-1-desktop.webp',
+    mobile: '/assets/images/banner-2-mobile.webp',
+    desktop: '/assets/images/banner-2-desktop.webp',
   },
 
   {
-    mobile: '/assets/images/banner-1-mobile.webp',
-    desktop: '/assets/images/banner-1-desktop.webp',
-  },
-
-  {
-    mobile: '/assets/images/banner-1-mobile.webp',
-    desktop: '/assets/images/banner-1-desktop.webp',
+    mobile: '/assets/images/banner-3-mobile.webp',
+    desktop: '/assets/images/banner-3-desktop.webp',
   },
 ]
 
