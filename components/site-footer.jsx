@@ -1,4 +1,7 @@
 import { siteConfig } from '@/config/site'
+import { Icons } from './icons'
+import { buttonVariants } from './ui/button'
+import { cn } from '@/lib/utils'
 
 export function SiteFooter() {
   const year = new Date().getFullYear()
@@ -9,10 +12,8 @@ export function SiteFooter() {
         <div>
           <span className=" font-bold">Nosotros</span>
           <div className="text-sm">
-            Somos una empresa dedicada a la fabricación y venta al por mayor y
-            menor de&nbsp;juegos didácticos para niños, abastecemos de juegos
-            educativos a colegios, nidos, etc. Somos proveedores del estado y
-            trabajamos con entidades públicas y privadas.
+            Somos una empresa dedicada a la importación y venta al por mayor y
+            menor de juegos didácticos para niños.
           </div>
         </div>
         <div className="">
@@ -41,7 +42,7 @@ export function SiteFooter() {
               <li>
                 <strong>Correo: </strong>
                 <a href="mailto:contacto@intelikidsperu.pe">
-                  neyda.mili11@gmail.com
+                  autismo.juguetes007@gmail.com
                 </a>
               </li>
               <li>
@@ -57,38 +58,24 @@ export function SiteFooter() {
         </div>
         <div>
           <span className=" font-bold">Síguenos:</span>
-          <div className="textwidget custom-html-widget">
-            <link
-              rel="stylesheet"
-              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-            />
-            <style
-              dangerouslySetInnerHTML={{
-                __html:
-                  'a.fa {\n padding: 20px;\n font-size: 20px;\n text-align: center;\n text-decoration: none;\n margin: 10px 4px;\n}\na.fa:hover {\n opacity: 0.7;\n}\na.fa-facebook {\n background: #3B5998;\n color: white;\n}\na.fa-youtube {\n background: #bb0000;\n color: white;\n}\na.fa-instagram {\n background: #e95950;\n color: white;\n}',
-              }}
-            />
-            <div>
-              {' '}
+          <div className="flex  mt-4">
+            {Object.entries(siteConfig.links).map(([social, url]) => (
               <a
-                href="https://www.facebook.com/intelikids.pe"
-                className="fa fa-facebook"
-              />{' '}
-              <a
-                href="https://www.youtube.com/channel/UCD459yvj5KwsmCnJQkwDwPw/featured"
-                className="fa fa-youtube"
-              />{' '}
-              <a
-                href="https://www.instagram.com/intelikids.pe/"
-                className="fa fa-instagram"
-              />
-            </div>
+                className={cn(buttonVariants({ variant: 'ghost' }))}
+                href={url}
+                target="_blank"
+                key={social}
+              >
+                {Icons[social]()}
+                <span className="sr-only">{social}</span>
+              </a>
+            ))}
           </div>
         </div>
       </div>
       <div className="py-6 md:px-8 md:py-0">
         <div className="container flex flex-col items-center justify-center mb-8">
-          <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
+          <p className="text-center text-sm   ">
             ©{year} {siteConfig.name}. Todos los derechos reservados. Hecho con
             mucho ❤️
           </p>

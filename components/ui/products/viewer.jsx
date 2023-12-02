@@ -22,7 +22,6 @@ export function ViewerProduct({ images, video, title }) {
     <>
       <div className="carousel-wrapper">
         <div className="carousel-container">
-          {/* Main Swiper */}
           <Swiper
             style={{
               '--swiper-navigation-color': 'var(--primary)',
@@ -44,7 +43,6 @@ export function ViewerProduct({ images, video, title }) {
               }
             })}
           </Swiper>
-
           {/* Thumbs Swiper */}
           <div className="thumbs-container">
             <Swiper

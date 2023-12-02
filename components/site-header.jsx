@@ -10,6 +10,7 @@ import { buttonVariants } from '@/components/ui/button'
 import { FaceIcon } from '@radix-ui/react-icons'
 import { FacebookIcon } from 'lucide-react'
 import { Logo } from './logo'
+import { siteConfig } from '@/config/site'
 
 export function SiteHeader() {
   return (
@@ -22,37 +23,27 @@ export function SiteHeader() {
             {/* <CommandMenu /> */}
           </div>
           <nav className="flex items-center">
-            <Link
-              // href={siteConfig.links.github}
-              href={'#'}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: 'ghost',
-                  }),
-                  'w-9 px-0',
-                )}
+            {Object.entries(siteConfig.links).map(([social, url]) => (
+              <Link
+                key={social}
+                // href={siteConfig.links.github}
+                href={url}
+                target="_blank"
+                rel="noreferrer"
               >
-                <Icons.facebook className="w-5 h-5 fill-current" />
-                <span className="sr-only">GitHub</span>
-              </div>
-            </Link>
-            <Link href={'#'} target="_blank" rel="noreferrer">
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: 'ghost',
-                  }),
-                  'w-9 px-0',
-                )}
-              >
-                <Icons.tiktok className="w-5 h-5 fill-current" />
-                <span className="sr-only">TikTok</span>
-              </div>
-            </Link>
+                <div
+                  className={cn(
+                    buttonVariants({
+                      variant: 'ghost',
+                    }),
+                    'w-9 px-0',
+                  )}
+                >
+                  {Icons[social]()}
+                  <span className="sr-only">GitHub</span>
+                </div>
+              </Link>
+            ))}
             {/* <ModeToggle /> */}
           </nav>
         </div>

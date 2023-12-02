@@ -9,8 +9,7 @@
   height: 400px;
 
   @media (width > 40em) {
-    height: calc(100vh - 3.5rem);
-    padding: 1rem 0rem;
+    height: calc(100vh - 8rem);
   }
 }
 
@@ -66,7 +65,6 @@
   justify-content: center;
 }
 /* .swiper-image-container { */
-/* } */
 
 .swiper {
   width: 100%;

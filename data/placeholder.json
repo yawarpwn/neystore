@@ -170,9 +170,9 @@
   {
     "id": "zzjofhz_4",
     "title": "Vilalatfan Busy Cube - Juguetes de viaje para niños, tablero de madera para autismo, juguete sensorial para niños pequeños, juguetes de aprendizaje, juguetes Montessori, cubo de actividad, juguetes para niños con autismo y TDAH de 1 a 8 años",
-    "price": 85,
-    "offert": 80,
-    "cost": 50,
+    "price": 80,
+    "offert": 65,
+    "cost": 42,
     "ranking": 5,
     "slug": "vilalatfan-busy-cube",
     "descriptions": [
@@ -269,7 +269,53 @@
   },
 
   {
-    "id": "zzjofhz_6",
+    "id": "zzjofhz_7",
+    "title": "Cevioce Juguetes para ansiedad para niños y adultos, 1 unidad, juguetes sensoriales para niños autistas con TDAH, juguetes para niños de 3 años en adelante, regalos para niños y niñas, cumpleaños, fiesta de Navidad (A)",
+    "price": 50,
+    "offert": 40,
+    "cost": 30,
+    "ranking": 5,
+    "slug": "cevioce-juguetes-para-ansiedad",
+    "info": {
+      "País de origen": "China",
+      "Edad recomendada por el fabricante": "3 años y más",
+      "Fabricante": "Cevioce"
+    },
+    "descriptions": [
+      "Cevioce Juguetes antiestrés para ratones: perfectos para aliviar la ansiedad y proporcionar una distracción divertida para niños y adolescentes. Estos juguetes antiestrés son una gran adición a cualquier escritorio y proporcionan una experiencia táctil satisfactoria. Seguro para niños de 3 años en adelante, estos juguetes sensoriales son imprescindibles para cualquier persona que busque una manera de aliviar el estrés y canalizar el exceso de energía.",
+      "Trensura el ejercicio de la mano: el mouse antiestrés es un juguete multifuncional diseñado para aliviar la ansiedad a través de temblores y tocarlos. Los juguetes antiestrés para adultos también promueven el ejercicio de las manos y la destreza de los dedos a través de la estimulación sensoriAdecuado para niños de tres años o más, así como para adultos que pasan mucho tiempo usando computadoras o tienen tendencia a hacerlo.",
+      "Fácil de jugar: los juguetes sensoriales Cevioce para ratón, con su pequeño tamaño perfecto para descomprimir, son portátiles e ideales para divertirse sobre la marcha. Puedes disfrutar de juguetes de viaje en cualquier momento y en cualquier lugar que desees. Su pequeño tamaño no compromete su eficacia para aliviar el estrés y la ansiedad. Su bonito diseño seguro que te traerá alegría y relajación. Así que ya sea que estés de viaje o simplemente necesites un descanso rápido del estrés de la vida diaria, el juguete de viaje es el compañero perfecto.",
+      "Divertidos regalos de juguete para la ansiedad: la solución perfecta para aquellos que buscan una experiencia profunda. Hechos de materiales de alta calidad y disponibles en una variedad de hermosos colores, los juguetes para autismo están diseñados para deleitar los sentidos y aumentar la concentración. Los juguetes para ansiedad para TDAH son imprescindibles para cualquier persona con trastorno de déficit de atención e hiperactividad, TDAH, trastorno del espectro autista o cualquier persona que quiera terapia de procesamiento sensorial."
+    ],
+    "media": [
+      {
+        "url": "https://m.media-amazon.com/images/I/61iOn5CqoGL._AC_SX425_.jpg",
+        "type": "image"
+      },
+      {
+        "url": "https://m.media-amazon.com/images/I/61vxja53GpL._AC_SX425_.jpg",
+        "type": "image"
+      },
+
+      {
+        "url": "https://m.media-amazon.com/images/I/71XykssjsdL._AC_SX425_.jpg",
+        "type": "image"
+      },
+
+      {
+        "url": "https://m.media-amazon.com/images/I/71iH-JXTyIL._AC_SX425_.jpg",
+        "type": "image"
+      }
+    ],
+    "video": {
+      "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/343ae2b0-c1bf-4b5f-8907-8848e51df71f/default.jobtemplate.mp4.480.mp4",
+      "cover": "https://m.media-amazon.com/images/I/61KU8qwsxDL.SS40_BG85,85,85_BR-120_PKdp-play-icon-overlay__.jpg",
+      "type": "video"
+    }
+  },
+
+  {
+    "id": "zzjofhz_8",
     "title": "Keychron V1 QMK/VIA - Teclado mecánico con cable personalizado, marco programable con diseño del 75% con interruptor marrón K Pro intercambiable en caliente, teclas PBT, teclado retroiluminado RGB para Mac Windows Linux, translúcido",
     "price": 300,
     "offert": 260,

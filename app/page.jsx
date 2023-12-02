@@ -3,7 +3,7 @@ import { CarouselProducts } from '@/components/ui/products/carousel'
 import { PageSlider } from '@/components/ui/page-slider'
 export default async function Home() {
   const products = await fetchProducts()
-  const otherProducts = [...products].sort(() => 0.5 - Math.random())
+  const otherProducts = [...products].reverse()
   return (
     <main>
       <PageSlider />

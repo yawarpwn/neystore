@@ -23,11 +23,6 @@ export function CarouselProducts({
         </h3>
       </div>
       <Swiper
-        style={{
-          '--swiper-navigation-color': 'hsla(var(--primary)/1)',
-          '--swiper-pagination-color': 'hsla(var(--primary)/1)',
-          '--swiper-navigation-size': '25px',
-        }}
         breakpoints={{
           640: {
             slidesPerView: 2,
