@@ -1,10 +1,58 @@
 [
   {
+    "id": "zzjofhz_0",
+    "title": "Juguetes para niños pequeños, tarjetas didácticas en español, 224 palabras visuales, juguetes de terapia del habla de bolsillo, tarjetas flash bilingües, juguetes sensoriales para autismo para niños autistas, juguetes Montessori de aprendizaje, color azul",
+    "price": 70,
+    "offert": 60,
+    "cost": 38,
+    "ranking": 4,
+    "slug": "tarjetas-didactivas-en-espanol-224-palabras",
+    "info": {
+      "Marca": "ACMEMATION",
+      "Talla": "Toddler",
+      "Material": "Plástico",
+      "Objetivo Educativo": "Habilidades lingüísticas"
+    },
+    "descriptions": [
+      "Versión bilingüe en inglés y español Juguetes de aprendizaje para niños pequeños: Las tarjetas flash parlantes para niños pequeños incluyen una máquina de tarjetas de aprendizaje y 225 tarjetas de doble cara 510 palabras a la vista que cubren 31 temas, agregando tres canciones para niños. Grandes juguetes Montessori para niños y niñas de más de 3 años. Puede ayudar a su hijo a ejercitar la escucha, mejorar la capacidad cognitiva y mejorar eficazmente la memoria y la concentración de los niños.",
+      "Tarjetas educativas de aprendizaje inteligentes: diseñadas por profesores, una excelente herramienta para el uso de la educación en casa o en el aula preescolar, el juguete educativo interactivo también cuenta con sonidos realistas de simulación de animales y automóviles, que es bueno para inspirar las habilidades fonológicas de los niños y las ilustraciones coloridas y los sonidos divertidos pueden atraer la atención de los niños y el interés de aprendizaje.",
+      "Aplicable tanto para el hogar como para la clase: estos juguetes para niños pequeños pueden ser utilizados por padres y maestros para enseñar a los más pequeños a aprender a hablar, ampliar el vocabulario y reforzar las palabras de vista de una manera mucho más interesante, especialmente útil para que los niños autistas desarrollen la capacidad del habla.",
+      "Fácil de usar: Coloque la tarjeta en la ranura del lector de tarjetas, el lector de tarjetas pronunciará las palabras. Cuando se inserta una tarjeta de animal o una tarjeta de transporte, el lector de tarjetas reproducirá el sonido real de animales o de transporte. Presione el botón de repetición para repetir la pronunciación y el efecto de sonido. Este juguete Montessori mantiene a los niños lejos del teléfono móvil y las tabletas, reduce el tiempo de pantalla de manera efectiva.",
+      "Regalos perfectos para niños de más de 3 años: es un gran juguete educativo para niños de 3, 4, 5, 6 años. Esta será tu elección perfecta para regalos divertidos de juguetes de aprendizaje para niños. Se aplica tanto para el hogar como para la clase. Juega con los niños, disfruta del tiempo familiar harmonius mientras aprendes y juegas."
+    ],
+
+    "media": [
+      {
+        "url": "https://m.media-amazon.com/images/I/71z6JgrzpTL._AC_SX425_.jpg",
+        "type": "image"
+      },
+      {
+        "url": "https://m.media-amazon.com/images/I/71ORui9xCmL._AC_SX425_.jpg",
+        "type": "image"
+      },
+
+      {
+        "url": "https://m.media-amazon.com/images/I/712B7QCjzlL._AC_SX425_.jpg",
+        "type": "image"
+      },
+
+      {
+        "url": "https://m.media-amazon.com/images/I/712B7QCjzlL._AC_SX425_.jpg",
+        "type": "image"
+      }
+    ],
+    "video": {
+      "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/c725573b-7775-4ff6-bc8e-329ad906573d/default.jobtemplate.mp4.480.mp4",
+      "cover": "https://m.media-amazon.com/images/I/71rJYcu828L._AC_SX425_.jpg",
+      "type": "video"
+    }
+  },
+  {
     "id": "zzjofhz_1",
     "title": "SAMSUNG Galaxy Tab S6 Lite - Tablet Android de 10.4 pulgadas y 64 GB, S Pen incluido, diseño delgado de metal, altavoces dobles AKG, batería de larga duración, versión estadounidense, 2022, rosa de gasa",
-    "price": 1200,
-    "offert": 1050,
-    "cost": 760,
+    "price": 1150,
+    "offert": 900,
+    "cost": 684,
     "ranking": 5,
     "slug": "samsung-galaxy-tab-s6-lite",
     "info": {
@@ -110,13 +158,20 @@
       {
         "url": "https://m.media-amazon.com/images/I/71WmyJGz1mL._AC_SY355_.jpg",
         "type": "image"
+      },
+      {
+        "url": "https://m.media-amazon.com/images/I/712B7QCjzlL._AC_SX425_.jpg",
+        "type": "image"
+      },
+      {
+        "url": "https://m.media-amazon.com/images/I/714RdfrRuRL._AC_SY355_.jpg",
+        "type": "image"
       }
     ],
     "video": {
-      "url": "https://www.youtube.com/watch?v=HVphB6RYBaY&t=21s",
-      "cover": "https://m.media-amazon.com/images/I/710KPhhH2vL._AC_SX425_.jpg",
-      "type": "video",
-      "provider": "youtube"
+      "url": "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/0a881b0e-11db-48c3-8841-1c7437b700a6/default.jobtemplate.mp4.480.mp4",
+      "cover": "https://m.media-amazon.com/images/I/714RdfrRuRL._AC_SY355_.jpg",
+      "type": "video"
     }
   },
 
@@ -170,9 +225,9 @@
   {
     "id": "zzjofhz_4",
     "title": "Vilalatfan Busy Cube - Juguetes de viaje para niños, tablero de madera para autismo, juguete sensorial para niños pequeños, juguetes de aprendizaje, juguetes Montessori, cubo de actividad, juguetes para niños con autismo y TDAH de 1 a 8 años",
-    "price": 80,
+    "price": 70,
     "offert": 65,
-    "cost": 42,
+    "cost": 32,
     "ranking": 5,
     "slug": "vilalatfan-busy-cube",
     "descriptions": [
@@ -220,9 +275,9 @@
     "id": "zzjofhz_5",
     "title": "KOKODI Tableta de escritura LCD, tableta de dibujo colorida de 10 pulgadas, almohadillas de dibujo electrónicas reutilizables borrables, juguete educativo y de aprendizaje para niños y niñas de 3 a 6 años",
     "price": 90,
-    "offert": 80,
-    "cost": 70,
-    "ranking": 3,
+    "offert": 85,
+    "cost": 54,
+    "ranking": 4,
     "slug": "tableta-de-escritura-lcd",
     "info": {
       "Dimensiones del producto": "9,8 x 6,9 x 0,24 pulgadas",

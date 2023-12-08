@@ -1,12 +1,11 @@
-import { createProduct } from '@/actions/products'
 import CreateProductForm from '@/components/ui/dashboard/products/create-product-form'
 
 function CreatePage() {
   return (
-    <div>
-      CreatePage
+    <main className="container">
+      <h1 className="text-3xl font-bold">CreatePage</h1>
       <CreateProductForm />
-    </div>
+    </main>
   )
 }
 
