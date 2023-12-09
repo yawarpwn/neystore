@@ -11,9 +11,17 @@ async function seedProducts() {
     const createTable = await sql`
 CREATE TABLE IF NOT EXISTS products (
   id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
-  name VARCHAR(255) NOT NULL,
-  price VARCHAR(255) NOT NULL,
-  assets JSONB NOT NULL
+  title VARCHAR(255) NOT NULL,
+  slug VARCHAR(255) NOT NULL,
+  price INT NOT NULL,
+  starts INT NOT NULL,
+  amazon_price INT NOT NULL,
+  category VARCHAR(255) NOT NULL,
+  images JSONB NOT NULL ,
+  details JSONB NOT NULL ,
+  features JSONB NOT NULL ,
+  videos JSONB ,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 `
     console.log(`Created "products" table`)

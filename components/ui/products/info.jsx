@@ -24,18 +24,20 @@ function TableInfo({ info }) {
   )
 }
 export function InfoProduct({ product }) {
-  const { title, ranking, characteristics, descriptions, info, slug } = product
+  // const { title, ranking, characteristics, descriptions, info, slug } = product
+  const { title, features, details, slug } = product
+  const ranking = 4
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-xl">{title}</h1>
       <RankingProduct ranking={ranking} isBig />
-      <PriceProduct price={product.price} offert={product.offert} isBig />
-      {info && <TableInfo info={info} />}
+      <PriceProduct price={product.price} offert={300} isBig />
+      {details && <TableInfo info={details} />}
       <BuyButton slug={slug} title={title} />
       <div className="">
         <h2 className="text-2xl font-bold">Sobre el producto:</h2>
         <ul className="list-disc m-0 p-5">
-          {descriptions.map((description) => (
+          {features.map((description) => (
             <li className="py-2" key={description}>
               {description}
             </li>

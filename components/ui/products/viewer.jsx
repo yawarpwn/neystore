@@ -15,7 +15,7 @@ import './carousel.css'
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules'
 import { VideoModal } from './video-modal'
 
-export function ViewerProduct({ images, video, title }) {
+export function ViewerProduct({ images, video, videos, title }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null)
 
   return (
@@ -24,8 +24,6 @@ export function ViewerProduct({ images, video, title }) {
         <div className="carousel-container">
           <Swiper
             style={{
-              '--swiper-navigation-color': 'var(--primary)',
-              '--swiper-pagination-color': 'var(--primary)',
               '--swiper-navigation-size': '25px',
             }}
             spaceBetween={10}
@@ -33,19 +31,20 @@ export function ViewerProduct({ images, video, title }) {
             modules={[FreeMode, Navigation, Thumbs]}
             className="main-swiper"
           >
-            {images.map(({ type, url }, index) => {
-              if (type === 'image') {
-                return (
-                  <SwiperSlide key={index}>
-                    <img src={url} alt={title} />
-                  </SwiperSlide>
-                )
-              }
+            {images.map(({ hiRes }, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <img src={hiRes} alt={title} />
+                </SwiperSlide>
+              )
             })}
           </Swiper>
           {/* Thumbs Swiper */}
           <div className="thumbs-container">
             <Swiper
+              style={{
+                '--swiper-navigation-size': '15px',
+              }}
               onSwiper={setThumbsSwiper}
               spaceBetween={10}
               slidesPerView={4}
@@ -53,20 +52,21 @@ export function ViewerProduct({ images, video, title }) {
               watchSlidesProgress={true}
               modules={[FreeMode, Navigation, Thumbs]}
               className="thumbs-swiper"
+              navigation
             >
-              {images.map(({ type, url }, index) => {
+              {images.map((img, index) => {
                 return (
                   <SwiperSlide key={index}>
                     <div className="thumbs-image-container">
-                      <img src={url} alt={`thumbnail ${title}`} />
+                      <img src={img.thumb} />
                     </div>
                   </SwiperSlide>
                 )
               })}
             </Swiper>
-            {video && (
+            {videos && (
               <div className="video-container">
-                <VideoModal video={video} title={title} />
+                <VideoModal videos={videos} title={title} />
               </div>
             )}
           </div>

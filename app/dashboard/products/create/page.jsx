@@ -1,5 +1,8 @@
 import CreateProductForm from '@/components/ui/dashboard/products/create-product-form'
 
+export const metadata = {
+  title: 'Crear Producto',
+}
 function CreatePage() {
   return (
     <main className="container">

@@ -13,23 +13,23 @@ import {
 } from '@/components/ui/dialog'
 import { PlayCircleIcon } from 'lucide-react'
 
-export function VideoModal({ video }) {
-  const { url, provider, cover } = video
+export function VideoModal({ videos }) {
+  const { url, thumb, thumbUrl, title, slateUrl } = videos[0]
   return (
     <Dialog>
       <DialogTrigger asChild>
         <div className="flex items-center">
           <div className="w-[50px] h-[50px] relative opacity-30 hover:opacity-100">
-            <button
-              type="button"
-              className="bg-primary text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center "
-              data-plyr="play"
-              aria-pressed="false"
-              aria-label="Play, Samsung Galaxy Tab S6 Lite (2022) | Unboxing en español"
-            >
-              <PlayIcon className="w-[18px] h-[18px]" />
-            </button>
-            <img className="w-full h-full object-cover" src={cover} />
+            {/* <button */}
+            {/*   type="button" */}
+            {/*   className="bg-primary text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center " */}
+            {/*   data-plyr="play" */}
+            {/*   aria-pressed="false" */}
+            {/*   aria-label="Play, Samsung Galaxy Tab S6 Lite (2022) | Unboxing en español" */}
+            {/* > */}
+            {/*   <PlayIcon className="w-[18px] h-[18px]" /> */}
+            {/* </button> */}
+            <img className="w-full h-full object-cover" src={thumb} />
           </div>
         </div>
       </DialogTrigger>
@@ -38,11 +38,10 @@ export function VideoModal({ video }) {
           <PlyrVideo
             source={{
               type: 'video',
-              poster: cover,
+              poster: slateUrl,
               sources: [
                 {
                   src: url,
-                  provider: provider,
                 },
               ],
             }}

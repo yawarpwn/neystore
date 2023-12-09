@@ -1,4 +1,9 @@
-import { fetchProductById, fetchProducts } from '@/lib/products'
+import {
+  fetchProductById,
+  fetchProductBySlug,
+  fetchProducts,
+  fetchProductsTest,
+} from '@/lib/products'
 import { ViewerProduct } from '@/components/ui/products/viewer'
 import { InfoProduct } from '@/components/ui/products/info'
 import { MoreInfoProduct } from '@/components/ui/products/more-info'
@@ -8,12 +13,13 @@ import { CarouselProducts } from '@/components/ui/products/carousel'
 import { siteConfig } from '@/config/site'
 
 export async function generateMetadata({ params }) {
-  const product = await fetchProductById({ slug: params.slug })
+  // const product = await fetchProductById({ slug: params.slug})
+  const product = await fetchProductBySlug({ slug: params.slug })
 
   const [title] = product.title.split(',')
   const description = product.title
-  const ogImage = product.media[0]
-  const ogUrl = `siteConfig.url/productos/${product.slug}`
+  const ogImageUrl = product.images[0].hiRes
+  const ogUrl = `${siteConfig.url}/productos/${product.slug}`
 
   return {
     title,
@@ -22,10 +28,10 @@ export async function generateMetadata({ params }) {
       title: title,
       description: description,
       url: ogUrl,
-      siteName: title,
+      siteName: siteConfig.name,
       images: [
         {
-          url: ogImage.url,
+          url: ogImageUrl,
           width: 1200,
           height: 630,
         },
@@ -35,8 +41,8 @@ export async function generateMetadata({ params }) {
 }
 
 async function ProductPage({ params }) {
-  const product = await fetchProductById({ slug: params.slug })
-  const products = await fetchProducts()
+  const product = await fetchProductBySlug({ slug: params.slug })
+  const products = await fetchProductsTest()
   const formatedtitle = product.slug.replace(/-/g, ' ')
   return (
     <main className="container">
@@ -57,22 +63,14 @@ async function ProductPage({ params }) {
           },
         ]}
       />
-      {/* <div className="border border-blue-500 grid grid-cols-2"> */}
-      {/*   <div className="h-[800px] relative border border-lime-500"> */}
-      {/*     <div className="sticky top-0 h-[200px] border border-black "> */}
-      {/*       ContendioSticky */}
-      {/*     </div> */}
-      {/*   </div> */}
-      {/*   <div className="border border-purple-500">Info Product</div> */}
-      {/* </div> */}
       <div className="grid grid-cols-1 gap-4  lg:grid-cols-2 ">
         <ViewerProduct
           title={product.title}
-          images={product.media}
-          video={product?.video}
+          images={product.images}
+          videos={product?.videos}
         />
         <InfoProduct product={product} />
-        {product.infoProduct && <MoreInfoProduct product={product} />}
+        {/* {product.infoProduct && <MoreInfoProduct product={product} />} */}
       </div>
       <CarouselProducts
         products={products}

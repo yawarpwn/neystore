@@ -2,11 +2,16 @@ import { Button } from '@/components/ui/button'
 import { RankingProduct } from './ranking'
 import { PriceProduct } from './price'
 import Link from 'next/link'
+import { getOriginalPrice } from '@/lib/utils'
 
 export function ProductCard({ product }) {
-  const { title, media, id, ranking, price, offert, slug } = product
+  // const { title, media, id, ranking, price, offert, slug } = product
+  const { title, price, slug, images, videos, details, features, starts } =
+    product
+  const imageSrc = images[0].hiRes
+  const falsePrice = price + 20
+  const originalPrice = getOriginalPrice(price)
 
-  const imageSrc = media[0].url
   return (
     <div className="p-2">
       <Link href={`/productos/${slug}`}>
@@ -26,14 +31,14 @@ export function ProductCard({ product }) {
           </div>
 
           {/* Ranking */}
-          <RankingProduct ranking={ranking} />
+          <RankingProduct ranking={starts} />
 
           {/* Offert button  */}
           <div className="flex justify-start ">
             <Button className="h-6 w-16">Oferta</Button>
           </div>
           {/* Price */}
-          <PriceProduct price={price} offert={offert} />
+          <PriceProduct price={originalPrice} offert={price} />
         </div>
       </Link>
     </div>

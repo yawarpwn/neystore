@@ -1,5 +1,5 @@
 import React from 'react'
-import { fetchProducts } from '@/lib/products'
+import { fetchProducts, fetchProductsTest } from '@/lib/products'
 import { ProductCard } from '@/components/ui/products/card'
 import { Breadcrumbs } from '@/components/ui/breadcrumbs'
 
@@ -9,6 +9,7 @@ export const metadata = {
 
 async function ProductPage() {
   const products = await fetchProducts()
+  const p = await fetchProductsTest()
   return (
     <main className="container relative">
       <Breadcrumbs
@@ -25,7 +26,7 @@ async function ProductPage() {
         ]}
       />
       <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))]">
-        {products.map((product) => (
+        {p.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
