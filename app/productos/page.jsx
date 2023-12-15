@@ -1,5 +1,5 @@
 import React from 'react'
-import { fetchProducts, fetchProductsTest } from '@/lib/products'
+import { fetchProducts } from '@/lib/products'
 import { ProductCard } from '@/components/ui/products/card'
 import { Breadcrumbs } from '@/components/ui/breadcrumbs'
 
@@ -8,8 +8,7 @@ export const metadata = {
 }
 
 async function ProductPage() {
-  const products = await fetchProducts()
-  const p = await fetchProductsTest()
+  const p = await fetchProducts()
   return (
     <main className="container relative">
       <Breadcrumbs

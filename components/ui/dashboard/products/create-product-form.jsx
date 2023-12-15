@@ -6,7 +6,7 @@ import { Label } from '@/components/ui/label'
 import { useFormState, useFormStatus } from 'react-dom'
 import { SubmitButton } from './submit-button'
 import { PreviewProduct } from './preview-product'
-import { Card, CardContent } from '../../card'
+import CreateUpdateProduct from './create-update-product'
 
 const initialState = {
   data: null,
@@ -26,40 +26,9 @@ function CreateProductForm() {
         {state.data && (
           <>
             <PreviewProduct product={state.data} />
-            <Card>
-              <CardContent className="py-8">
-                <form action={saveAction} className="flex items-center">
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <input
-                      type="number"
-                      placeholder="Tu precio"
-                      name="price"
-                      required
-                    />
-                    <input
-                      type="hidden"
-                      defaultValue={JSON.stringify(state.data)}
-                      name="data"
-                    />
-                    <select
-                      name="category"
-                      defaultValue=""
-                      aria-labelledby="category"
-                      required
-                    >
-                      <option disabled value="">
-                        Categoria
-                      </option>
-                      <option defaultValue="joy">Juguetes</option>
-                      <option defaultValue="tech">Tecnologia</option>
-                    </select>
-                    <SubmitButton>Agregar </SubmitButton>
-                  </div>
-                </form>
-              </CardContent>
-            </Card>
+            <CreateUpdateProduct action={saveAction} data={state.data} isEdit />
           </>
-        )}{' '}
+        )}
       </div>
     </>
   )

@@ -64,7 +64,7 @@ export function ViewerProduct({ images, video, videos, title }) {
                 )
               })}
             </Swiper>
-            {videos && (
+            {videos.length > 0 && (
               <div className="video-container">
                 <VideoModal videos={videos} title={title} />
               </div>

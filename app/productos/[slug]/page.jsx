@@ -2,7 +2,6 @@ import {
   fetchProductById,
   fetchProductBySlug,
   fetchProducts,
-  fetchProductsTest,
 } from '@/lib/products'
 import { ViewerProduct } from '@/components/ui/products/viewer'
 import { InfoProduct } from '@/components/ui/products/info'
@@ -42,7 +41,7 @@ export async function generateMetadata({ params }) {
 
 async function ProductPage({ params }) {
   const product = await fetchProductBySlug({ slug: params.slug })
-  const products = await fetchProductsTest()
+  const products = await fetchProducts()
   const formatedtitle = product.slug.replace(/-/g, ' ')
   return (
     <main className="container">

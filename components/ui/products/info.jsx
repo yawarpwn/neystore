@@ -1,6 +1,7 @@
 import { RankingProduct } from './ranking'
 import { PriceProduct } from './price'
 import { BuyButton } from './buy-button'
+import { getOriginalPrice } from '@/lib/utils'
 
 function TableInfo({ info }) {
   const infoArray = Object.entries(info)
@@ -25,13 +26,13 @@ function TableInfo({ info }) {
 }
 export function InfoProduct({ product }) {
   // const { title, ranking, characteristics, descriptions, info, slug } = product
-  const { title, features, details, slug } = product
-  const ranking = 4
+  const { title, features, details, slug, price, starts } = product
+  const originalPrice = getOriginalPrice(price)
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-xl">{title}</h1>
-      <RankingProduct ranking={ranking} isBig />
-      <PriceProduct price={product.price} offert={300} isBig />
+      <RankingProduct ranking={starts} isBig />
+      <PriceProduct price={originalPrice} offert={product.price} isBig />
       {details && <TableInfo info={details} />}
       <BuyButton slug={slug} title={title} />
       <div className="">
