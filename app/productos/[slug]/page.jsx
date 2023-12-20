@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
 
   const [title] = product.title.split(',')
   const description = product.title
-  const ogImageUrl = product.images[0].hiRes
+  const ogImageUrl = product.images[1].hiRes
   const ogUrl = `${siteConfig.url}/productos/${product.slug}`
 
   return {
@@ -30,9 +30,7 @@ export async function generateMetadata({ params }) {
       siteName: siteConfig.name,
       images: [
         {
-          url: ogImageUrl,
-          width: 1200,
-          height: 630,
+          url: new URL(ogImageUrl),
         },
       ],
     },
