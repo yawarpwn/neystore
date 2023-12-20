@@ -1,8 +1,7 @@
 'use client'
 
-import { PlyrVideo } from './plyrvideo'
-
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
+import { VideoPlayer } from './video-player'
 
 export function VideoModal({ videos }) {
   const { url, thumb, thumbUrl, title, slateUrl } = videos[0]
@@ -17,20 +16,21 @@ export function VideoModal({ videos }) {
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] md:max-w-[700px]">
         <div className="mt-4">
-          <PlyrVideo
-            source={{
-              type: 'video',
-              poster: slateUrl,
-              sources: [
-                {
-                  src: url,
-                },
-              ],
-            }}
-            options={{
-              clickToPlay: true,
-            }}
-          />
+          <VideoPlayer url={url} />
+          {/* <PlyrVideo */}
+          {/*   source={{ */}
+          {/*     type: 'video', */}
+          {/*     poster: slateUrl, */}
+          {/*     sources: [ */}
+          {/*       { */}
+          {/*         src: url, */}
+          {/*       }, */}
+          {/*     ], */}
+          {/*   }} */}
+          {/*   options={{ */}
+          {/*     clickToPlay: true, */}
+          {/*   }} */}
+          {/* /> */}
         </div>
       </DialogContent>
     </Dialog>

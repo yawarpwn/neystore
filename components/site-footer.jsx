@@ -12,8 +12,8 @@ export function SiteFooter() {
         <div>
           <span className=" font-bold">Nosotros</span>
           <div className="text-sm">
-            Somos una empresa dedicada a la importación y venta al por mayor y
-            menor de juegos didácticos para niños.
+            Somos una empresa dedicada a la importación juegos didácticos para
+            niños y artículos relacionados.
           </div>
         </div>
         <div className="">
@@ -42,12 +42,13 @@ export function SiteFooter() {
               <li>
                 <strong>Correo: </strong>
                 <a href="mailto:contacto@intelikidsperu.pe">
-                  autismo.juguetes007@gmail.com
+                  ventas.neystore@gmail.com
                 </a>
               </li>
               <li>
-                <strong>Tienda: </strong>
-                <span>Av. Argentina 538 - Int 1160 - Lima</span>
+                <strong>Almacén: </strong>
+                <br />
+                <span>Av. Maquinaria 325 - Reynoso - Callao</span>
               </li>
               <li>
                 <strong>Teléfono: </strong>

@@ -1,5 +1,5 @@
 'use client'
-
+import { VideoModal } from './video-modal'
 import React, { useRef, useState } from 'react'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -63,11 +63,11 @@ export function ViewerProduct({ images, video, videos, title }) {
                 )
               })}
             </Swiper>
-            {/* {videos.length > 0 && ( */}
-            {/*   <div className="video-container"> */}
-            {/*     <VideoModal videos={videos} title={title} /> */}
-            {/*   </div> */}
-            {/* )} */}
+            {videos.length > 0 && (
+              <div className="video-container">
+                <VideoModal videos={videos} title={title} />
+              </div>
+            )}
           </div>
         </div>
       </div>
