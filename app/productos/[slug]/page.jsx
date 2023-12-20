@@ -12,15 +12,15 @@ import { CarouselProducts } from '@/components/ui/products/carousel'
 import { siteConfig } from '@/config/site'
 
 export async function generateMetadata({ params }) {
-  // const product = await fetchProductById({ slug: params.slug})
   const product = await fetchProductBySlug({ slug: params.slug })
 
   const [title] = product.title.split(',')
   const description = product.title
-  const ogImageUrl = product.images[1].hiRes
+  const ogImageUrl = product.images[0].hiRes
   const ogUrl = `${siteConfig.url}/productos/${product.slug}`
 
   return {
+    metadataBase: new URL('https://m.media-amazon.com'),
     title,
     description,
     openGraph: {
@@ -28,11 +28,7 @@ export async function generateMetadata({ params }) {
       description: description,
       url: ogUrl,
       siteName: siteConfig.name,
-      images: [
-        {
-          url: new URL(ogImageUrl),
-        },
-      ],
+      images: [ogImageUrl],
     },
   }
 }

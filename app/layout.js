@@ -12,6 +12,7 @@ const fontSans = FontSans({
 })
 
 export const metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
@@ -29,6 +30,13 @@ export const metadata = {
     ],
     locale: 'en-ES',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@eMartiiin94',
+    title: 'Title webtsite',
+    description: 'this is the desciption',
+    image: siteConfig.ogImage,
   },
 }
 

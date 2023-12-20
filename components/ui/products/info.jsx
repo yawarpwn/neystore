@@ -9,8 +9,8 @@ function TableInfo({ info }) {
     <div className="">
       <table>
         <tbody>
-          {infoArray.map(([key, value]) => (
-            <tr className="" key={value}>
+          {infoArray.map(([key, value], index) => (
+            <tr className="" key={index}>
               <td className="p-1">
                 <span className="font-bold">{key}</span>
               </td>
@@ -25,7 +25,6 @@ function TableInfo({ info }) {
   )
 }
 export function InfoProduct({ product }) {
-  // const { title, ranking, characteristics, descriptions, info, slug } = product
   const { title, features, details, slug, price, starts } = product
   const originalPrice = getOriginalPrice(price)
   return (
@@ -38,8 +37,8 @@ export function InfoProduct({ product }) {
       <div className="">
         <h2 className="text-2xl font-bold">Sobre el producto:</h2>
         <ul className="list-disc m-0 p-5">
-          {features.map((description) => (
-            <li className="py-2" key={description}>
+          {features.map((description, index) => (
+            <li className="py-2" key={index}>
               {description}
             </li>
           ))}
