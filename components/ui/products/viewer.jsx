@@ -13,7 +13,6 @@ import './carousel.css'
 
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules'
-import { VideoModal } from './video-modal'
 
 export function ViewerProduct({ images, video, videos, title }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null)
@@ -64,11 +63,11 @@ export function ViewerProduct({ images, video, videos, title }) {
                 )
               })}
             </Swiper>
-            {videos.length > 0 && (
-              <div className="video-container">
-                <VideoModal videos={videos} title={title} />
-              </div>
-            )}
+            {/* {videos.length > 0 && ( */}
+            {/*   <div className="video-container"> */}
+            {/*     <VideoModal videos={videos} title={title} /> */}
+            {/*   </div> */}
+            {/* )} */}
           </div>
         </div>
       </div>
