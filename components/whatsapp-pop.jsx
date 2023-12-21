@@ -6,14 +6,14 @@ import { cn } from '@/lib/utils'
 
 const team = [
   {
-    name: 'Raquel M. ',
+    name: 'Raquel Maldonado. ',
     job: 'Gerente Ventas',
-    image: 'https://tellsenales.com/assets/team/raquel_maldonado.webp',
+    image: '/assets/team/raquel-maldonado.webp',
     phone: '971531018',
   },
 
   {
-    name: 'Jesus S.',
+    name: 'Jesus Saavedra',
     job: 'Asistente Ventas',
     image:
       'https://img.freepik.com/premium-vector/cute-boy-avatar-illustration_637684-31.jpg',
@@ -21,7 +21,7 @@ const team = [
   },
 
   {
-    name: 'Milagros S.',
+    name: 'Milagros Saavedra.',
     job: 'Asistente Ventas',
     image:
       'https://img.freepik.com/vector-premium/cara-linda-chica-avatar-nina-retrato-ilustracion-plana-vectorial_192760-82.jpg?w=2000',
