@@ -2,6 +2,7 @@
 
 import { Card, CardContent } from '@/components/ui/card'
 import { SubmitButton } from './submit-button'
+import { CATEGORIES } from '@/const'
 
 export default function CreateUpdateProduct({ action, data, isEdit }) {
   return (
@@ -31,8 +32,11 @@ export default function CreateUpdateProduct({ action, data, isEdit }) {
               <option disabled value="">
                 Categoria
               </option>
-              <option defaultValue="joy">Juguetes</option>
-              <option defaultValue="tech">Tecnologia</option>
+              {Object.values(CATEGORIES).map((category) => (
+                <option defaultValue={category} key={category}>
+                  {category}
+                </option>
+              ))}
             </select>
             <SubmitButton>Agregar </SubmitButton>
           </div>

@@ -1,10 +1,9 @@
 export const siteConfig = {
   name: 'NeyStore',
-  url: 'https://neystore.vercel.app',
-  ogImage:
-    'https://neystore.vercel.app/assets/images/banner-juguetes-desktop.webp',
+  url: 'https://www.neystore.pe',
+  ogImage: 'https://www.neystore.pe/assets/images/banner-juguetes-desktop.webp',
   description:
-    'Somos importadores de productos de la mejor calidad. Encuentra todos los productos que necesitas. Encuentra todos los productos que necesitas. Encuentra todos los productos que necesitas.',
+    'Somos importadores de juegos didácticos para niños y artículos relacionados. Consulta nuestras promociones y descuentos.',
   links: {
     tiktok: '#',
     facebook: '#',

@@ -3,6 +3,7 @@ import { VideoModal } from './video-modal'
 import React, { useRef, useState } from 'react'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { ShareButton } from '@/components/share-button'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -21,6 +22,7 @@ export function ViewerProduct({ images, video, videos, title }) {
     <>
       <div className="carousel-wrapper">
         <div className="carousel-container">
+          <ShareButton />
           <Swiper
             style={{
               '--swiper-navigation-size': '25px',
@@ -30,9 +32,9 @@ export function ViewerProduct({ images, video, videos, title }) {
             modules={[FreeMode, Navigation, Thumbs]}
             className="main-swiper"
           >
-            {images.map(({ hiRes }, index) => {
+            {images.map(({ hiRes }) => {
               return (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={hiRes}>
                   <img src={hiRes} alt={title} />
                 </SwiperSlide>
               )
@@ -55,7 +57,7 @@ export function ViewerProduct({ images, video, videos, title }) {
             >
               {images.map((img, index) => {
                 return (
-                  <SwiperSlide key={index}>
+                  <SwiperSlide key={img.thumb}>
                     <div className="thumbs-image-container">
                       <img src={img.thumb} />
                     </div>
@@ -63,7 +65,7 @@ export function ViewerProduct({ images, video, videos, title }) {
                 )
               })}
             </Swiper>
-            {videos.length > 0 && (
+            {videos?.length > 0 && (
               <div className="video-container">
                 <VideoModal videos={videos} title={title} />
               </div>
