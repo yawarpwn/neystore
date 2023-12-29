@@ -26,7 +26,7 @@ function CreateProductForm() {
         {state.data && (
           <>
             <PreviewProduct product={state.data} />
-            <CreateUpdateProduct action={saveAction} data={state.data} isEdit />
+            <CreateUpdateProduct action={saveAction} data={state.data} />
           </>
         )}
       </div>
