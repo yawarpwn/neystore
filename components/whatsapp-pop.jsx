@@ -9,7 +9,7 @@ const team = [
     name: 'Raquel Maldonado. ',
     job: 'Gerente Ventas',
     image: '/assets/team/raquel-maldonado.webp',
-    phone: '971531018',
+    phone: '900224005',
   },
 
   {
@@ -17,7 +17,7 @@ const team = [
     job: 'Asistente Ventas',
     image:
       'https://img.freepik.com/premium-vector/cute-boy-avatar-illustration_637684-31.jpg',
-    phone: '971531018',
+    phone: '900224005',
   },
 
   {
@@ -25,7 +25,7 @@ const team = [
     job: 'Asistente Ventas',
     image:
       'https://img.freepik.com/vector-premium/cara-linda-chica-avatar-nina-retrato-ilustracion-plana-vectorial_192760-82.jpg?w=2000',
-    phone: '971531018',
+    phone: '900224005',
   },
 ]
 

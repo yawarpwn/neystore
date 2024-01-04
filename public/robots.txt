@@ -1,7 +1,9 @@
-# Block all crawlers for /dashboard
-User-agent: *
-Disallow: /dashboard
-
-# Allow all crawlers
+# *
 User-agent: *
 Allow: /
+
+# Host
+Host: https://www.neystore.pe
+
+# Sitemaps
+Sitemap: https://www.neystore.pe/sitemap.xml

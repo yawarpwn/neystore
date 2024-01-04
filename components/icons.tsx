@@ -179,7 +179,7 @@ export const Icons = {
       overflow="visible"
       width={22}
       height={22}
-      xmlspace="preserve"
+      xmlSpace="preserve"
       {...props}
     >
       <path
@@ -199,7 +199,6 @@ export const Icons = {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      dataSlot="icon"
       className="w-6 h-6"
       {...props}
     >

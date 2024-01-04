@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  color-scheme: light dark;
   --swiper-theme-color: hsla(var(--primary) / 1) !important;
   --swiper-navigation-size: 20px !important;
 }
