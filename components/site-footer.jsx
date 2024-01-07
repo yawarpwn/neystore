@@ -52,7 +52,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <strong>Teléfono: </strong>
-                <a href="tel:+51900224005">971531018</a>
+                <a href="tel:+51900224005">900 224 005</a>
               </li>
             </ul>
           </div>

@@ -4,7 +4,7 @@ import { PageSlider } from '@/components/ui/page-slider'
 import { Suspense } from 'react'
 
 export const metadata = {
-  title: 'Inicio',
+  title: 'Inicio | NeyStore',
 }
 export default async function Home() {
   const products = await fetchProducts()
