@@ -14,6 +14,8 @@ import { siteConfig } from '@/config/site'
 export async function generateMetadata({ params }) {
   const product = await fetchProductBySlug({ slug: params.slug })
 
+  console.log(product)
+
   const [title] = product.title.split(',')
   const description = product.title
   const ogImageUrl = product.images[0].hiRes
