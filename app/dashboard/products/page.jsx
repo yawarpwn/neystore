@@ -9,22 +9,22 @@ async function ProductsPage() {
   return (
     <main className="container">
       <ul className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))]">
-        {products.map((product) => (
-          <>
-            <div className="flex flex-col gap-2">
-              <ProductCard key={product.id} product={product} />
-              <div className="flex justify-evenly">
-                <Link
-                  className={buttonVariants({ variant: 'outline' })}
-                  href={`/dashboard/products/edit/${product.id}`}
-                >
-                  Editar
-                </Link>
-                <DeleteProductForm id={product.id} />
-              </div>
-            </div>
-          </>
-        ))}
+        {/* {products.map((product) => ( */}
+        {/*   <> */}
+        {/*     <div className="flex flex-col gap-2"> */}
+        {/*       <ProductCard key={product.id} product={product} /> */}
+        {/*       <div className="flex justify-evenly"> */}
+        {/*         <Link */}
+        {/*           className={buttonVariants({ variant: 'outline' })} */}
+        {/*           href={`/dashboard/products/edit/${product.id}`} */}
+        {/*         > */}
+        {/*           Editar */}
+        {/*         </Link> */}
+        {/*         <DeleteProductForm id={product.id} /> */}
+        {/*       </div> */}
+        {/*     </div> */}
+        {/*   </> */}
+        {/* ))} */}
       </ul>
     </main>
   )

@@ -25,15 +25,14 @@ function TableInfo({ info }) {
   )
 }
 export function InfoProduct({ product }) {
-  const { title, features, details, slug, price, starts } = product
-  const originalPrice = getOriginalPrice(price)
+  const { title, features, details, price, ranking, id } = product
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-xl">{title}</h1>
-      <RankingProduct ranking={starts} isBig />
-      <PriceProduct price={originalPrice} offert={product.price} isBig />
+      <RankingProduct ranking={ranking} isBig />
+      <PriceProduct price={price} isBig />
       {details && <TableInfo info={details} />}
-      <BuyButton slug={slug} title={title} />
+      <BuyButton slug={id} title={title} />
       <div className="">
         <h2 className="text-2xl font-bold">Sobre el producto:</h2>
         <ul className="list-disc m-0 p-5">

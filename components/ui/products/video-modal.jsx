@@ -3,14 +3,14 @@
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { VideoPlayer } from './video-player'
 
-export function VideoModal({ videos }) {
-  const { url, thumb, thumbUrl, title, slateUrl } = videos[0]
+export function VideoModal({ video }) {
+  const { url, cover, title } = video
   return (
     <Dialog>
       <DialogTrigger asChild>
         <div className="flex items-center">
           <div className="w-[50px] h-[50px] relative opacity-30 hover:opacity-100">
-            <img className="w-full h-full object-cover" src={thumb} />
+            <img className="w-full h-full object-cover" src={cover} alt={title} />
           </div>
         </div>
       </DialogTrigger>

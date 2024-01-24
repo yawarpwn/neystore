@@ -8,7 +8,7 @@ export const metadata = {
 }
 
 async function ProductPage() {
-  const p = await fetchProducts()
+  const products = await fetchProducts()
   return (
     <main className="container relative">
       <Breadcrumbs
@@ -25,7 +25,7 @@ async function ProductPage() {
         ]}
       />
       <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))]">
-        {p.map((product) => (
+        {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>

@@ -1,22 +1,22 @@
-'use client'
-import { VideoModal } from './video-modal'
-import React, { useRef, useState } from 'react'
+"use client";
+import React, { useRef, useState } from "react";
+import { VideoModal } from "./video-modal";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { ShareButton } from '@/components/share-button'
+import { ShareButton } from "@/components/share-button";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css'
-import 'swiper/css/free-mode'
-import 'swiper/css/thumbs'
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/thumbs";
 
-import './carousel.css'
+import "./carousel.css";
 
 // import required modules
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules'
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
-export function ViewerProduct({ images, video, videos, title }) {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null)
+export function ViewerProduct({ images, video, title }) {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
     <>
@@ -25,26 +25,26 @@ export function ViewerProduct({ images, video, videos, title }) {
           <ShareButton />
           <Swiper
             style={{
-              '--swiper-navigation-size': '25px',
+              "--swiper-navigation-size": "25px",
             }}
             spaceBetween={10}
             thumbs={{ swiper: thumbsSwiper }}
             modules={[FreeMode, Navigation, Thumbs]}
             className="main-swiper"
           >
-            {images.map(({ hiRes }) => {
+            {images.map(({ url, id }) => {
               return (
-                <SwiperSlide key={hiRes}>
-                  <img src={hiRes} alt={title} />
+                <SwiperSlide key={id}>
+                  <img src={url} alt={title} />
                 </SwiperSlide>
-              )
+              );
             })}
           </Swiper>
           {/* Thumbs Swiper */}
           <div className="thumbs-container">
             <Swiper
               style={{
-                '--swiper-navigation-size': '15px',
+                "--swiper-navigation-size": "15px",
               }}
               onSwiper={setThumbsSwiper}
               spaceBetween={10}
@@ -57,22 +57,22 @@ export function ViewerProduct({ images, video, videos, title }) {
             >
               {images.map((img, index) => {
                 return (
-                  <SwiperSlide key={img.thumb}>
+                  <SwiperSlide key={img.id}>
                     <div className="thumbs-image-container">
                       <img src={img.thumb} />
                     </div>
                   </SwiperSlide>
-                )
+                );
               })}
             </Swiper>
-            {videos?.length > 0 && (
+            {video && (
               <div className="video-container">
-                <VideoModal videos={videos} title={title} />
+                <VideoModal video={video} title={title} />
               </div>
             )}
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }

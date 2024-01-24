@@ -227,7 +227,7 @@
     ],
     "category": "Juguetes",
     "cost": 65,
-    "details": {},
+    "details": null,
     "price": 85,
     "title": "Consola de empuje rápido con retroalimentación instantánea de sonido | Juego de empuje rápido de mano | Juguete sensorial educativo interactivo Pop The Target para niños y adultos | Regalo divertido para niños de 3 a 12 años",
     "images": [
@@ -361,7 +361,7 @@
     ],
     "category": "Juguetes",
     "cost": 61,
-    "details": {},
+    "details": null,
     "price": 80,
     "title": "Vilalatfan Busy Cube - Cubo para niños con autismo, tablero sensorial de viaje, juguetes de viaje para niños pequeños de 1 a 3 años, juguetes Montessori de aprendizaje, cubo de actividades para personas autistas y TDAH para niños de 1 a 8 años",
     "images": [
@@ -524,7 +524,7 @@
     ],
     "category": "Juguetes",
     "cost": 23,
-    "details": {},
+    "details": null,
     "price": 38,
     "title": "Cevioce Juguetes para ansiedad para niños y adultos, 1 unidad, juguetes sensoriales para niños autistas con TDAH, juguetes para niños de 3 años en adelante, regalos para niños y niñas, cumpleaños, fiesta de Navidad (A)",
     "images": [
@@ -694,7 +694,9 @@
     ],
     "category": "Juguetes",
     "cost": 76,
-    "details": {},
+    "details": {
+      "origen": "China"
+    },
     "price": 95,
     "title": "Advoxa Montessori - Juguete de tablero ocupado – 8 interruptores de luz LED, habilidades motoras finas, juguetes sensoriales de madera, habilidades de aprendizaje temprano, juguetes de viaje para niños de 1 año o más",
     "images": [
@@ -801,7 +803,7 @@
     ],
     "category": "Juguetes",
     "cost": 61,
-    "details": {},
+    "details": null,
     "price": 80,
     "title": "URMYWO Tablero Montessori de madera para niños pequeños con interruptores de luz LED, juguetes sensoriales, actividades de viaje, para niños de 1, 2, 3, 4 años, regalo de Navidad y cumpleaños para niños",
     "images": [
@@ -852,7 +854,7 @@
     ],
     "category": "Juguetes",
     "cost": 103,
-    "details": {},
+    "details": null,
     "price": 150,
     "title": "Juguetes Montessori de tablero ocupado para niños de 1, 2, 3 años, cubo educativo ocupado sensorial, juguete de viaje para niños pequeños, actividad de aprendizaje Montessori para bebés de 18 a 36 meses, regalos para cumpleaños y Navidad",
     "images": [
