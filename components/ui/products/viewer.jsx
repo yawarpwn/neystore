@@ -18,6 +18,8 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 export function ViewerProduct({ images, video, title }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
+  console.log({ video });
+
   return (
     <>
       <div className="carousel-wrapper">
@@ -65,7 +67,7 @@ export function ViewerProduct({ images, video, title }) {
                 );
               })}
             </Swiper>
-            {video && (
+            {video?.url && (
               <div className="video-container">
                 <VideoModal video={video} title={title} />
               </div>

@@ -1,11 +1,10 @@
-import { RankingProduct } from './ranking'
-import { PriceProduct } from './price'
-import Link from 'next/link'
+import Link from "next/link";
+import { PriceProduct } from "./price";
+import { RankingProduct } from "./ranking";
 
 export function ProductCard({ product }) {
-  const { title, price, id, images, ranking, } = product
-  const imageSrc = images[0].url
-  console.log({ product })
+  const { title, price, id, images, ranking } = product;
+  const imageSrc = images[0].url;
 
   return (
     <div className="p-2">
@@ -33,5 +32,5 @@ export function ProductCard({ product }) {
         </div>
       </Link>
     </div>
-  )
+  );
 }

@@ -1,4 +1,5 @@
 import products from "@/data/products.json";
+import { scrapperAmazonProduct } from "@/lib/scrapper";
 import { createClient } from "@libsql/client";
 const token =
   `eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIyMDI0LTAxLTIyVDAxOjAyOjA0Ljc0OTY5NzE3NloiLCJpZCI6Ijc4MmY5ODViLWI4YjctMTFlZS1iMTg5LWE2MDMzNTNjNjBiMyJ9.3X3y3x8AejmpMduoI99_Hr6khsPoiQpkFAMThjugn3hIQTyKvfEX6H_lXC164q5KrS1MBawbTG3wVUMYeXiEBA`;
@@ -6,6 +7,8 @@ const db = createClient({
   url: "libsql://neystore-yawarpwn.turso.io",
   authToken: token,
 });
+
+// const product = await scrapperAmazonProduct();
 
 const product = {
   title:
@@ -61,7 +64,7 @@ async function seedProducts(productToInsert) {
   const id = crypto.randomUUID();
   try {
     await insertProduct(productToInsert, id);
-    if (productToInsert.vide) {
+    if (Boolean(productToInsert.video)) {
       await insertVideo(productToInsert.video, id);
     }
     for (const image of productToInsert.images) {
@@ -135,7 +138,7 @@ async function insertVideo(video, id) {
 }
 
 // for (const product of products) {
-//   seedProducts(product)
+//   seedProducts(product);
 // }
 
 async function main() {

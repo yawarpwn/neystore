@@ -1,10 +1,11 @@
-'use client'
+"use client";
 
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
-import { VideoPlayer } from './video-player'
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { VideoPlayer } from "./video-player";
 
 export function VideoModal({ video }) {
-  const { url, cover, title } = video
+  const { url, cover, title } = video;
+  console.log(video);
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -34,5 +35,5 @@ export function VideoModal({ video }) {
         </div>
       </DialogContent>
     </Dialog>
-  )
+  );
 }
