@@ -60,7 +60,7 @@ const product = {
   ranking: 4,
 };
 
-async function seedProducts(productToInsert) {
+export async function insertProductToDb(productToInsert) {
   const id = crypto.randomUUID();
   try {
     await insertProduct(productToInsert, id);
@@ -141,8 +141,8 @@ async function insertVideo(video, id) {
 //   seedProducts(product);
 // }
 
-async function main() {
-  await seedProducts(product);
-  // await getProducts()
-}
-main();
+// async function main() {
+//   await seedProducts(product);
+//   // await getProducts()
+// }
+// main();
