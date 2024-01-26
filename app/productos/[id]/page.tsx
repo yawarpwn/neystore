@@ -1,9 +1,9 @@
 import { ProductSkeleton } from "@/components/skeletons/product";
 import { ProductsSkeleton } from "@/components/skeletons/products";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs/index";
-import { CarouselProducts } from "@/components/ui/products/carousel";
 import { InfoProduct } from "@/components/ui/products/info";
 import { ProductViewer } from "@/components/ui/products/product-viewer";
+import { ProductsCarousel } from "@/components/ui/products/products-carousel";
 import { siteConfig } from "@/config/site";
 import { fetchProductById, fetchProducts } from "@/lib/products";
 import { Suspense } from "react";
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: { params: { id?: string } }) 
 async function CarouselProductsServer() {
   const products = await fetchProducts();
   return (
-    <CarouselProducts
+    <ProductsCarousel
       products={products}
       title="Productos similares sugeridos"
     />
@@ -59,22 +59,6 @@ async function ProductPage({ params }: { params?: { id?: string } }) {
 
   return (
     <main className="container max-w-5xl">
-      <Breadcrumbs
-        breadcrumbs={[
-          {
-            title: "Inicio",
-            href: "/",
-          },
-          {
-            title: "Productos",
-            href: "/productos",
-          },
-          {
-            title: "producto",
-            active: true,
-          },
-        ]}
-      />
       <Suspense fallback={<ProductsSkeleton />}>
         <ViewProductServer id={id} />
       </Suspense>

@@ -1,5 +1,4 @@
 import { ProductsSkeleton } from "@/components/skeletons/products";
-import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { ProductCard } from "@/components/ui/products/card";
 import { fetchProducts } from "@/lib/products";
 import { Suspense } from "react";
@@ -20,18 +19,6 @@ async function ProductosList() {
 async function ProductPage() {
   return (
     <main className="container max-w-5xl relative">
-      <Breadcrumbs
-        breadcrumbs={[
-          {
-            title: "Inicio",
-            href: "/",
-          },
-          {
-            title: "Productos",
-            active: true,
-          },
-        ]}
-      />
       <Suspense fallback={<ProductsSkeleton />}>
         <ProductosList />
       </Suspense>

@@ -1,57 +1,52 @@
-'use client'
-// import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'
-
-import { Swiper, SwiperSlide } from 'swiper/react'
+"use client";
+import Autoplay from "embla-carousel-autoplay";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./carousel";
 
 // Import Swiper styles
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-import 'swiper/css/scrollbar'
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const images = [
   {
-    mobile: '/assets/images/banner-juguetes-mobile.webp',
-    desktop: '/assets/images/banner-juguetes-desktop.webp',
+    mobile: "/assets/images/banner-juguetes-mobile.webp",
+    desktop: "/assets/images/banner-juguetes-desktop.webp",
   },
 
   {
-    mobile: '/assets/images/banner-2-mobile.webp',
-    desktop: '/assets/images/banner-2-desktop.webp',
+    mobile: "/assets/images/banner-2-mobile.webp",
+    desktop: "/assets/images/banner-2-desktop.webp",
   },
 
   {
-    mobile: '/assets/images/banner-3-mobile.webp',
-    desktop: '/assets/images/banner-3-desktop.webp',
+    mobile: "/assets/images/banner-3-mobile.webp",
+    desktop: "/assets/images/banner-3-desktop.webp",
   },
-]
+];
 
 export function PageSlider() {
   return (
-    <div className="">
-      <Swiper
-        style={{
-          width: '100%',
-          height: '100%',
-        }}
-        slidesPerView={1}
-        modules={[Navigation, Pagination]}
-        navigation
-        pagination
-      >
+    <Carousel
+      plugins={[
+        Autoplay({ delay: 5000 }),
+      ]}
+      className="mx-auto max-w-full"
+    >
+      <CarouselContent>
         {images.map((image) => (
-          <SwiperSlide key={image.mobile}>
+          <CarouselItem className="w-full flex-shrink-0" key={image.mobile}>
             <picture>
               <source
                 srcSet={image.desktop}
                 media="(min-width: 720px)"
-              ></source>
+              >
+              </source>
               <img src={image.mobile} />
             </picture>
-          </SwiperSlide>
+          </CarouselItem>
         ))}
-      </Swiper>
-    </div>
-  )
+      </CarouselContent>
+    </Carousel>
+  );
 }

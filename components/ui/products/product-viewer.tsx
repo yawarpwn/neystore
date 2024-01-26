@@ -20,11 +20,11 @@ export function ProductViewer({ images, video, title }: Props) {
 
   return (
     <>
-      <div className="flex relative">
-        <div className="md:sticky top-16 md:h-[calc(100vh-3.5rem)] border border-lime-500 flex flex-col gap-2">
+      <div className="flex justify-center relative">
+        <div className="md:sticky top-16 md:h-[calc(100vh-3.5rem)]  flex flex-col gap-2">
           <ShareButton />
           {/* Main Swiper */}
-          <div className="w-80 h-80  md:w-[480px] md:h-[480px]  border">
+          <div className="w-80 h-80  md:w-[480px] md:h-[480px]">
             <img className="w-full h-full object-contain" src={currentViewer} alt={title} />
           </div>
           {/* Thumbs Swiper */}
@@ -32,7 +32,7 @@ export function ProductViewer({ images, video, title }: Props) {
             opts={{
               align: "start",
             }}
-            className="w-80 md:w-[480px] border"
+            className="w-80 md:w-[480px]"
           >
             <CarouselContent className="items-center">
               {images.map((img, index) => {

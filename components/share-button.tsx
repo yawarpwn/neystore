@@ -20,7 +20,7 @@ export function ShareButton() {
   return (
     <button
       onClick={handleShare}
-      className="absolute bg-background flex items-center justify-between w-8 h-8 rounded-full top-4 right-4 z-50"
+      className="absolute bg-background flex items-center justify-between w-8 h-8 rounded-full top-2 right-0 z-50"
     >
       <Icons.share />
     </button>

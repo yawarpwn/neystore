@@ -1,19 +1,19 @@
-'use client'
+"use client";
 
-import * as React from 'react'
-import Link from 'next/link'
-import { useRouter } from 'next/navigation'
-import { HamburgerMenuIcon } from '@radix-ui/react-icons'
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import * as React from "react";
 
-import { docsConfig } from '@/config/docs'
-import { cn } from '@/lib/utils'
-import { Button } from '@/components/ui/button'
-import { ScrollArea } from '@/components/ui/scroll-area'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { Logo } from '@/components/logo'
+import { Logo } from "@/components/logo";
+import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { docsConfig } from "@/config/docs";
+import { cn } from "@/lib/utils";
 
 export function MobileNav() {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -32,7 +32,9 @@ export function MobileNav() {
           className="flex items-center"
           onOpenChange={setOpen}
         >
-          <Logo />
+          <img className="w-8 h-8" src="/favicon.svg" />
+          <span className="font-2xl font-extrabold">Ney</span>
+          <span className="font-2xl font-light">Store</span>
         </MobileLink>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-3">
@@ -52,22 +54,22 @@ export function MobileNav() {
         </ScrollArea>
       </SheetContent>
     </Sheet>
-  )
+  );
 }
 
 function MobileLink({ href, onOpenChange, className, children, ...props }) {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <Link
       href={href}
       onClick={() => {
-        router.push(href.toString())
-        onOpenChange?.(false)
+        router.push(href.toString());
+        onOpenChange?.(false);
       }}
       className={cn(className)}
       {...props}
     >
       {children}
     </Link>
-  )
+  );
 }
