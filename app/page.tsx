@@ -20,7 +20,7 @@ export default async function Home() {
   return (
     <main>
       <PageSlider />
-      <div className="container flex flex-col gap-4 mt-4">
+      <div className="container max-w-5xl flex flex-col gap-4 mt-4">
         <Suspense fallback="cargando..">
           <CarouselProducts products={tecnologyProducts} title="Tecnología" />
         </Suspense>

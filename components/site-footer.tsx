@@ -7,7 +7,7 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="site-footer container mt-10">
+    <footer className="site-footer container max-w-5xl mt-10">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
         <div>
           <span className=" font-bold">Nosotros</span>
@@ -39,18 +39,11 @@ export function SiteFooter() {
           <div className="textwidget">
             <ul>
               <li>
-                <strong>Correo:</strong>
                 <a href="mailto:contacto@intelikidsperu.pe">
                   ventas.neystore@gmail.com
                 </a>
               </li>
               <li>
-                <strong>Almacén:</strong>
-                <br />
-                <span>Av. Maquinaria 325 - Reynoso - Callao</span>
-              </li>
-              <li>
-                <strong>Teléfono:</strong>
                 <a href="tel:+51900224005">900 224 005</a>
               </li>
             </ul>

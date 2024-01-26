@@ -47,6 +47,7 @@ export async function fetchProducts(): Promise<Product[]> {
 }
 
 export async function fetchProductById(id: string): Promise<Product> {
+  console.log("fetchProductById: ", id);
   try {
     const { rows } = await db.execute({
       sql: `

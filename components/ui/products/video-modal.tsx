@@ -2,6 +2,7 @@
 
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { type Productvideo } from "@/types";
+import { PlayIcon } from "lucide-react";
 import { VideoPlayer } from "./video-player";
 
 export function VideoModal({ video }: { video: Productvideo }) {
@@ -9,10 +10,11 @@ export function VideoModal({ video }: { video: Productvideo }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="flex items-center">
-          <div className="w-[50px] h-[50px] relative opacity-30 hover:opacity-100">
-            <img className="w-full h-full object-cover" src={cover} alt={title} />
+        <div className="w-16 h-16 hover:cursor-pointer relative">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary w-8 h-8 rounded-full flex items-center justify-center">
+            <PlayIcon className="text-white w-5 h-5" />
           </div>
+          <img className="w-full h-full object-cover" src={cover} alt={title} />
         </div>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] md:max-w-[700px]">

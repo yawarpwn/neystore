@@ -22,6 +22,7 @@ interface Props {
   title: string;
 }
 export function ViewerProduct({ images, video, title }: Props) {
+  console.log({ images, video, title });
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
@@ -30,9 +31,6 @@ export function ViewerProduct({ images, video, title }: Props) {
         <div className="carousel-container">
           <ShareButton />
           <Swiper
-            style={{
-              "--swiper-navigation-size": "25px",
-            }}
             spaceBetween={10}
             thumbs={{ swiper: thumbsSwiper }}
             modules={[FreeMode, Navigation, Thumbs]}
@@ -49,9 +47,6 @@ export function ViewerProduct({ images, video, title }: Props) {
           {/* Thumbs Swiper */}
           <div className="thumbs-container">
             <Swiper
-              style={{
-                "--swiper-navigation-size": "15px",
-              }}
               onSwiper={setThumbsSwiper}
               spaceBetween={10}
               slidesPerView={4}

@@ -1,9 +1,12 @@
+import { ProductSkeleton } from "@/components/skeletons/product";
+import { ProductsSkeleton } from "@/components/skeletons/products";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs/index";
 import { CarouselProducts } from "@/components/ui/products/carousel";
 import { InfoProduct } from "@/components/ui/products/info";
-import { ViewerProduct } from "@/components/ui/products/viewer";
+import { ProductViewer } from "@/components/ui/products/product-viewer";
 import { siteConfig } from "@/config/site";
 import { fetchProductById, fetchProducts } from "@/lib/products";
+import { Suspense } from "react";
 
 export async function generateMetadata({ params }: { params: { id?: string } }) {
   const product = await fetchProductById(params.id);
@@ -27,13 +30,35 @@ export async function generateMetadata({ params }: { params: { id?: string } }) 
   };
 }
 
-async function ProductPage({ params }: { params?: { id?: string } }) {
+async function CarouselProductsServer() {
   const products = await fetchProducts();
-  const product = await fetchProductById(params.id);
-  const [slug] = product.title.split(",");
+  return (
+    <CarouselProducts
+      products={products}
+      title="Productos similares sugeridos"
+    />
+  );
+}
+
+async function ViewProductServer({ id }: { id: string }) {
+  const product = await fetchProductById(id);
+  return (
+    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 ">
+      <ProductViewer
+        title={product.title}
+        images={product.images}
+        video={product.video}
+      />
+      <InfoProduct product={product} />
+    </div>
+  );
+}
+
+async function ProductPage({ params }: { params?: { id?: string } }) {
+  const id = params?.id;
 
   return (
-    <main className="container">
+    <main className="container max-w-5xl">
       <Breadcrumbs
         breadcrumbs={[
           {
@@ -45,23 +70,15 @@ async function ProductPage({ params }: { params?: { id?: string } }) {
             href: "/productos",
           },
           {
-            title: slug,
+            title: "producto",
             active: true,
           },
         ]}
       />
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 ">
-        <ViewerProduct
-          title={product.title}
-          images={product.images}
-          video={product.video}
-        />
-        <InfoProduct product={product} />
-      </div>
-      <CarouselProducts
-        products={products}
-        title="Productos similares sugeridos"
-      />
+      <Suspense fallback={<ProductsSkeleton />}>
+        <ViewProductServer id={id} />
+      </Suspense>
+      <CarouselProductsServer />
       {/* <GenericInfo /> */}
     </main>
   );

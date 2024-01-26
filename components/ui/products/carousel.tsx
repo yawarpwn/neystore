@@ -1,20 +1,26 @@
-'use client'
+"use client";
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { ProductCard } from './card'
+import { type Product } from "@/types";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { ProductCard } from "./card";
 
 // Import Swiper styles
-import 'swiper/css'
-import 'swiper/css/free-mode'
-import 'swiper/css/thumbs'
-import 'swiper/css/navigation'
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/thumbs";
+import "swiper/css/navigation";
 
-import { FreeMode, Navigation, Pagination } from 'swiper/modules'
+import { FreeMode, Navigation } from "swiper/modules";
+
+interface Props {
+  products: Product[];
+  title?: string;
+}
 
 export function CarouselProducts({
   products,
-  title = 'Title Carousel Section',
-}) {
+  title = "Title Carousel Section",
+}: Props) {
   return (
     <section>
       <div className="bg-gradient-to-r from-[#5700AA] via-[#C2009C] to-[#FD4B21] p-4 rounded">
@@ -46,9 +52,9 @@ export function CarouselProducts({
             <SwiperSlide key={product.id}>
               <ProductCard product={product} />
             </SwiperSlide>
-          )
+          );
         })}
       </Swiper>
     </section>
-  )
+  );
 }
