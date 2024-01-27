@@ -58,7 +58,7 @@ async function ProductPage({ params }: { params?: { id?: string } }) {
   const id = params?.id;
 
   return (
-    <main className="container max-w-5xl">
+    <main className="container max-w-5xl pt-4">
       <Suspense fallback={<ProductsSkeleton />}>
         <ViewProductServer id={id} />
       </Suspense>

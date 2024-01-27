@@ -12,7 +12,9 @@ export function SiteHeader() {
           <Logo />
         </Link>
         <MainNav />
-        <SocialIcons />
+        <div className="hidden md:flex">
+          <SocialIcons />
+        </div>
         <MobileNav />
       </div>
     </header>
