@@ -1,12 +1,7 @@
 "use client";
 import Autoplay from "embla-carousel-autoplay";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./carousel";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import { Carousel, CarouselContent, CarouselItem } from "./carousel";
+import { Skeleton } from "./skeleton";
 
 const images = [
   {

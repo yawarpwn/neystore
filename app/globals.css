@@ -3,20 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light dark;
-  --swiper-theme-color: hsla(var(--primary) / 1) !important;
-  --swiper-navigation-size: 20px !important;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  padding: 1rem;
-  border-radius: 100%;
-  background: hsla(0 50% 100% / 0.3);
-
-  &:hover {
-    background: hsla(0 50% 100% / 0.8);
-  }
+  color-scheme: light light;
 }
 
 @layer base {

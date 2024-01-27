@@ -1,3 +1,4 @@
+import { Logo } from "@/components/logo";
 import { PageSlider } from "@/components/ui/page-slider";
 import { ProductsCarousel } from "@/components/ui/products/products-carousel";
 import { CATEGORIES } from "@/const";
@@ -20,6 +21,8 @@ export default async function Home() {
   return (
     <main>
       <PageSlider />
+      <span>
+      </span>
       <div className="container max-w-5xl flex flex-col gap-4 mt-4">
         <Suspense fallback="cargando..">
           <ProductsCarousel products={tecnologyProducts} title="Tecnología" />

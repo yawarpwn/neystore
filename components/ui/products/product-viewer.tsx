@@ -23,11 +23,11 @@ export function ProductViewer({ images, video, title }: Props) {
       <div className="flex justify-center relative">
         <div className="md:sticky top-16 md:h-[calc(100vh-3.5rem)]  flex flex-col gap-2">
           <ShareButton />
-          {/* Main Swiper */}
+          {/* Main  */}
           <div className="w-80 h-80  md:w-[480px] md:h-[480px]">
             <img className="w-full h-full object-contain" src={currentViewer} alt={title} />
           </div>
-          {/* Thumbs Swiper */}
+          {/* Thumbs */}
           <Carousel
             opts={{
               align: "start",

@@ -1,16 +1,22 @@
 "use client";
 
-import { HamburgerMenuIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import * as React from "react";
-
-import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { docsConfig } from "@/config/docs";
+import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+import { type Route } from "next";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import * as React from "react";
+import { Icons } from "./icons";
+import { IsoLogo } from "./iso-logo";
+import { SocialIcons } from "./social-icons";
+
+import { buttonVariants } from "@/components/ui/button";
+import { type Route } from "next";
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false);
@@ -32,9 +38,7 @@ export function MobileNav() {
           className="flex items-center"
           onOpenChange={setOpen}
         >
-          <img className="w-8 h-8" src="/favicon.svg" />
-          <span className="font-2xl font-extrabold">Ney</span>
-          <span className="font-2xl font-light">Store</span>
+          <IsoLogo />
         </MobileLink>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-3">
@@ -52,12 +56,19 @@ export function MobileNav() {
             )}
           </div>
         </ScrollArea>
+        <SocialIcons />
       </SheetContent>
     </Sheet>
   );
 }
 
-function MobileLink({ href, onOpenChange, className, children, ...props }) {
+interface MobileLinkProps {
+  href: Route<string> | URL;
+  onOpenChange?: (open: boolean) => void;
+  children: React.ReactNode;
+  className: string;
+}
+function MobileLink({ href, onOpenChange, className, children, ...props }: MobileLinkProps) {
   const router = useRouter();
   return (
     <Link
