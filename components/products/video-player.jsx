@@ -8,5 +8,5 @@ export function VideoPlayer({ url }) {
     const player = new Plyr('#player')
   }, [])
 
-  return <video playsInline controls id="player" src={url}></video>
+  return <video playsInline controls id='player' src={url}></video>
 }

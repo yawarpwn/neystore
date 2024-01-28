@@ -1,5 +1,16 @@
 const mappedProducts = products.map(product => {
-  const { id, features, category, amazon_price, price, title, images, details, videos, starts } = product
+  const {
+    id,
+    features,
+    category,
+    amazon_price,
+    price,
+    title,
+    images,
+    details,
+    videos,
+    starts,
+  } = product
 
   function mapImage(image) {
     const { thumb, hiRes } = image
@@ -14,12 +25,14 @@ const mappedProducts = products.map(product => {
     return {
       url,
       title,
-      cover: slateUrl
+      cover: slateUrl,
     }
   }
 
   const mappedImages = images.map(mapImage)
-  const mappedVideos = videos && videos.length > 0 ? videos.map(mapVideo)[0] : null
+  const mappedVideos = videos && videos.length > 0
+    ? videos.map(mapVideo)[0]
+    : null
 
   return {
     id,
@@ -31,7 +44,7 @@ const mappedProducts = products.map(product => {
     title,
     images: mappedImages,
     video: mappedVideos,
-    ranking: Number(starts)
+    ranking: Number(starts),
   }
 })
 

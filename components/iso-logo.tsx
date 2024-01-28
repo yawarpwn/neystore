@@ -1,5 +1,5 @@
 export function IsoLogo() {
-  return <img className="w-6 h-6" src="/isologo.svg" alt="Logo NeyStore" />;
+  return <img className='w-6 h-6' src='/isologo.svg' alt='Logo NeyStore' />
 }
 {/* <svg */}
 {/*   xmlns="http://www.w3.org/2000/svg" */}

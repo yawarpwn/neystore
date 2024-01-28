@@ -1,9 +1,12 @@
 {
-  "typescript": {},
+  "lineWidth": 80,
+  "typescript": {
+    "quoteStyle": "preferSingle",
+    "semiColons": "asi",
+    "binaryExpression.operatorPosition": "sameLine"
+  },
   "json": {},
-  "markdown": {},
-  "toml": {},
-  "excludes": ["**/node_modules", "**/*-lock.json"],
+  "excludes": ["**/node_modules", "**/*-lock.json", ".next"],
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.88.10.wasm",
     "https://plugins.dprint.dev/json-0.19.1.wasm"

@@ -7,7 +7,7 @@ import { useFormStatus } from 'react-dom'
 export function SubmitButton() {
   const { pending } = useFormStatus()
   return (
-    <Button variant="destructive" disabled={pending}>
+    <Button variant='destructive' disabled={pending}>
       {pending ? 'Eliminando...' : 'Eliminar'}
     </Button>
   )
@@ -16,7 +16,7 @@ export function SubmitButton() {
 export function DeleteProductForm({ id }) {
   return (
     <form action={deleteProduct}>
-      <input type="hidden" name="id" value={id} required />
+      <input type='hidden' name='id' value={id} required />
       <SubmitButton />
     </form>
   )

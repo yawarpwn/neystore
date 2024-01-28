@@ -1,8 +1,7 @@
-import { sql } from "@vercel/postgres";
 import products from '@/data/products.json'
+import { sql } from '@vercel/postgres'
 
 async function createProductsTable() {
-
 }
 
 async function seedProducts() {
@@ -37,8 +36,6 @@ async function seedProducts() {
     }))
 
     console.log('inserted products ', rows.length)
-
-
   } catch (err) {
     console.log('Error seding products', err)
   }
@@ -50,4 +47,3 @@ async function main() {
 }
 
 main()
-

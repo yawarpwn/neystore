@@ -1,21 +1,23 @@
-import { ProductInfo } from "@/components/products/product-info";
-import { ProductViewer } from "@/components/products/product-viewer";
-import { ProductsCarousel } from "@/components/products/products-carousel";
-import { ProductsSkeleton } from "@/components/skeletons/products";
-import { siteConfig } from "@/config/site";
-import { fetchProductById, fetchProducts } from "@/lib/products";
-import { Suspense } from "react";
+import { ProductInfo } from '@/components/products/product-info'
+import { ProductViewer } from '@/components/products/product-viewer'
+import { ProductsCarousel } from '@/components/products/products-carousel'
+import { ProductsSkeleton } from '@/components/skeletons/products'
+import { siteConfig } from '@/config/site'
+import { fetchProductById, fetchProducts } from '@/lib/products'
+import { Suspense } from 'react'
 
-export async function generateMetadata({ params }: { params: { id?: string } }) {
-  const product = await fetchProductById(params.id);
+export async function generateMetadata(
+  { params }: { params: { id?: string } },
+) {
+  const product = await fetchProductById(params.id)
 
-  const [title] = product.title.split(",");
-  const description = product.title;
-  const ogImageUrl = product.images[0].url;
-  const ogUrl = `${siteConfig.url}/productos/${product.id}`;
+  const [title] = product.title.split(',')
+  const description = product.title
+  const ogImageUrl = product.images[0].url
+  const ogUrl = `${siteConfig.url}/productos/${product.id}`
 
   return {
-    metadataBase: new URL("https://m.media-amazon.com"),
+    metadataBase: new URL('https://m.media-amazon.com'),
     title,
     description,
     openGraph: {
@@ -25,23 +27,23 @@ export async function generateMetadata({ params }: { params: { id?: string } }) 
       siteName: siteConfig.name,
       images: [ogImageUrl],
     },
-  };
+  }
 }
 
 async function CarouselProductsServer() {
-  const products = await fetchProducts();
+  const products = await fetchProducts()
   return (
     <ProductsCarousel
       products={products}
-      title="Productos similares sugeridos"
+      title='Productos similares sugeridos'
     />
-  );
+  )
 }
 
 async function ViewProductServer({ id }: { id: string }) {
-  const product = await fetchProductById(id);
+  const product = await fetchProductById(id)
   return (
-    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 ">
+    <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 '>
       <ProductViewer
         title={product.title}
         images={product.images}
@@ -49,20 +51,20 @@ async function ViewProductServer({ id }: { id: string }) {
       />
       <ProductInfo product={product} />
     </div>
-  );
+  )
 }
 
 async function ProductPage({ params }: { params?: { id?: string } }) {
-  const id = params?.id;
+  const id = params?.id
 
   return (
-    <main className="container max-w-5xl pt-4">
+    <main className='container max-w-5xl pt-4'>
       <Suspense fallback={<ProductsSkeleton />}>
         <ViewProductServer id={id} />
       </Suspense>
       <CarouselProductsServer />
     </main>
-  );
+  )
 }
 
-export default ProductPage;
+export default ProductPage

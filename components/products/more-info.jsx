@@ -7,7 +7,7 @@ export function MoreInfoProduct({ product }) {
   return (
     <>
       <TableDetailsProduct
-        title="Caracteristicas y Especificaciones"
+        title='Caracteristicas y Especificaciones'
         info={infoProductArray}
       />
     </>

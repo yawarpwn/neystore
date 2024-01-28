@@ -9,16 +9,16 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "https://m.media-amazon.com",
-        port: "",
-        pathname: "/images/**",
+        protocol: 'https',
+        hostname: 'https://m.media-amazon.com',
+        port: '',
+        pathname: '/images/**',
       },
     ],
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

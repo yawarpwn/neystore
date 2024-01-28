@@ -1,12 +1,12 @@
-import { type Product } from "@/types";
-import { createClient } from "@libsql/client";
-import { unstable_noStore as noStore } from "next/cache";
+import { type Product } from '@/types'
+import { createClient } from '@libsql/client'
+import { unstable_noStore as noStore } from 'next/cache'
 const token =
-  `eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIyMDI0LTAxLTIyVDAxOjAyOjA0Ljc0OTY5NzE3NloiLCJpZCI6Ijc4MmY5ODViLWI4YjctMTFlZS1iMTg5LWE2MDMzNTNjNjBiMyJ9.3X3y3x8AejmpMduoI99_Hr6khsPoiQpkFAMThjugn3hIQTyKvfEX6H_lXC164q5KrS1MBawbTG3wVUMYeXiEBA`;
+  `eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIyMDI0LTAxLTIyVDAxOjAyOjA0Ljc0OTY5NzE3NloiLCJpZCI6Ijc4MmY5ODViLWI4YjctMTFlZS1iMTg5LWE2MDMzNTNjNjBiMyJ9.3X3y3x8AejmpMduoI99_Hr6khsPoiQpkFAMThjugn3hIQTyKvfEX6H_lXC164q5KrS1MBawbTG3wVUMYeXiEBA`
 const db = createClient({
-  url: "libsql://neystore-yawarpwn.turso.io",
+  url: 'libsql://neystore-yawarpwn.turso.io',
   authToken: token,
-});
+})
 
 export async function fetchProducts(): Promise<Product[]> {
   // noStore()
@@ -31,7 +31,7 @@ export async function fetchProducts(): Promise<Product[]> {
       videos v ON (v.product_id = p.id)
       GROUP BY
       p.id, p.title, p.category, p.price, p.cost, p.ranking;
-    `);
+    `)
 
     const mappedProducts: Product[] = products.map((prod: any) => ({
       ...prod,
@@ -39,15 +39,15 @@ export async function fetchProducts(): Promise<Product[]> {
       video: JSON.parse(prod.video),
       features: JSON.parse(prod.features),
       details: JSON.parse(prod.details),
-    }));
-    return mappedProducts;
+    }))
+    return mappedProducts
   } catch (error) {
-    console.log("Error geting products", error);
+    console.log('Error geting products', error)
   }
 }
 
 export async function fetchProductById(id: string): Promise<Product> {
-  console.log("fetchProductById: ", id);
+  console.log('fetchProductById: ', id)
   try {
     const { rows } = await db.execute({
       sql: `
@@ -73,9 +73,9 @@ export async function fetchProductById(id: string): Promise<Product> {
         p.id, p.title, p.category, p.price, p.cost, p.ranking
       `,
       args: [id],
-    });
+    })
 
-    const productFromDb = rows[0] as any;
+    const productFromDb = rows[0] as any
 
     const product: Product = {
       ...productFromDb,
@@ -83,10 +83,10 @@ export async function fetchProductById(id: string): Promise<Product> {
       video: JSON.parse(productFromDb.video),
       features: JSON.parse(productFromDb.features),
       details: JSON.parse(productFromDb.details),
-    };
+    }
 
-    return product;
+    return product
   } catch (error) {
-    console.log("Error geting products by id", error);
+    console.log('Error geting products by id', error)
   }
 }

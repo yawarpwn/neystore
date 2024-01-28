@@ -1,12 +1,13 @@
 export const siteConfig = {
-  name: "NeyStore",
-  url: "https://www.neystore.pe",
-  ogImage: "https://www.neystore.pe/assets/images/banner-juguetes-desktop.webp",
+  name: 'NeyStore',
+  url: 'https://www.neystore.pe',
+  ogImage: 'https://www.neystore.pe/assets/images/banner-juguetes-desktop.webp',
   description:
-    "Somos importadores de juegos didácticos, periféricos originales y artículos relacionados. Consulta nuestras promociones y descuentos.",
-  phone: "900224005",
+    'Somos importadores de juegos didácticos, periféricos originales y artículos relacionados. Consulta nuestras promociones y descuentos.',
+  phone: '900224005',
   links: {
-    tiktok: "https://www.tiktok.com/@mamaazulraquel",
-    facebook: "https://www.facebook.com/people/NeyStore/100068073616022/?mibextid=ZbWKwL",
+    tiktok: 'https://www.tiktok.com/@mamaazulraquel',
+    facebook:
+      'https://www.facebook.com/people/NeyStore/100068073616022/?mibextid=ZbWKwL',
   },
-};
+}

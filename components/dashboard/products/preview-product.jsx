@@ -15,17 +15,15 @@ export function PreviewProduct({ product }) {
       <Table>
         <TableBody>
           <TableRow>
-            <TableCell>Titulo: </TableCell>
+            <TableCell>Titulo:</TableCell>
             <TableCell>{title}</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>imagenes</TableCell>
             <TableCell>
-              <div className="overflow-x-auto">
-                <ul className="flex gap-2">
-                  {images.map((img) => (
-                    <img key={img.hiRes} src={img.thumb} />
-                  ))}
+              <div className='overflow-x-auto'>
+                <ul className='flex gap-2'>
+                  {images.map((img) => <img key={img.hiRes} src={img.thumb} />)}
                 </ul>
               </div>
             </TableCell>

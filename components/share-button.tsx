@@ -1,28 +1,28 @@
-"use client";
-import { Icons } from "./icons";
+'use client'
+import { Icons } from './icons'
 export function ShareButton() {
   const share = async () => {
     try {
       navigator.share({
         url: window.location.href,
         title: window.document.title,
-        text: "Neystore - Productos",
-      });
+        text: 'Neystore - Productos',
+      })
     } catch (err) {
-      console.log("Error sharing");
+      console.log('Error sharing')
     }
-  };
+  }
 
   const handleShare = () => {
-    share();
-  };
+    share()
+  }
 
   return (
     <button
       onClick={handleShare}
-      className="absolute bg-background flex items-center justify-between w-8 h-8 rounded-full top-0 right-0 z-50"
+      className='absolute bg-background flex items-center justify-between w-8 h-8 rounded-full top-0 right-0 z-50'
     >
       <Icons.share />
     </button>
-  );
+  )
 }

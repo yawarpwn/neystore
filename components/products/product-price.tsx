@@ -1,18 +1,18 @@
-import { cn } from "@/lib/utils";
-import { formatNumberToLocal } from "@/lib/utils";
+import { cn } from '@/lib/utils'
+import { formatNumberToLocal } from '@/lib/utils'
 interface Props {
-  price: number;
-  isBig?: boolean;
+  price: number
+  isBig?: boolean
 }
 export function ProductPrice({ price, isBig = false }: Props) {
   const getDiscountPercentage = ({ price, offert }) => {
-    return Math.round(((price - offert) / price) * 100);
-  };
-  const formatedPrice = formatNumberToLocal(price);
+    return Math.round(((price - offert) / price) * 100)
+  }
+  const formatedPrice = formatNumberToLocal(price)
 
   return (
     <>
-      <div className={cn("inline-flex", isBig ? "gap-4" : "gap-2")}>
+      <div className={cn('inline-flex', isBig ? 'gap-4' : 'gap-2')}>
         {/* <span */}
         {/*   className={cn( */}
         {/*     'line-through  text-red-600', */}
@@ -21,8 +21,8 @@ export function ProductPrice({ price, isBig = false }: Props) {
         {/* > */}
         {/*   -{discoucountPercent} % */}
         {/* </span> */}
-        <span className="">
-          <span className={cn("algin-top", isBig ? "text-5xl" : "text-xl")}>
+        <span className=''>
+          <span className={cn('algin-top', isBig ? 'text-5xl' : 'text-xl')}>
             {formatedPrice}
           </span>
           {/* <span */}
@@ -49,5 +49,5 @@ export function ProductPrice({ price, isBig = false }: Props) {
       {/*   </span> */}
       {/* </div> */}
     </>
-  );
+  )
 }

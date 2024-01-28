@@ -1,5 +1,5 @@
 export const CATEGORIES = {
-  TOYS: "Juguetes",
-  TECNOLOGY: "Tecnologia",
-  BEAUTY: "Belleza",
-};
+  TOYS: 'Juguetes',
+  TECNOLOGY: 'Tecnologia',
+  BEAUTY: 'Belleza',
+}
