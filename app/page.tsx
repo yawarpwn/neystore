@@ -1,6 +1,6 @@
 import { Logo } from "@/components/logo";
+import { ProductsCarousel } from "@/components/products/products-carousel";
 import { PageSlider } from "@/components/ui/page-slider";
-import { ProductsCarousel } from "@/components/ui/products/products-carousel";
 import { CATEGORIES } from "@/const";
 import { fetchProducts } from "@/lib/products";
 import { type Metadata } from "next";

@@ -1,7 +1,7 @@
+import { ProductPrice } from "@/components/products/product-price";
+import { ProductRanking } from "@/components/products/product-ranking";
 import { type Product } from "@/types";
 import Link from "next/link";
-import { PriceProduct } from "./price";
-import { RankingProduct } from "./ranking";
 
 interface Props {
   product: Product;
@@ -29,10 +29,10 @@ export function ProductCard(props: Props) {
           </div>
 
           {/* Ranking */}
-          <RankingProduct ranking={ranking} />
+          <ProductRanking ranking={ranking} />
 
           {/* Price */}
-          <PriceProduct price={price} />
+          <ProductPrice price={price} />
         </div>
       </Link>
     </div>

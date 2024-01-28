@@ -1,6 +1,6 @@
 import { Icons } from "@/components/icons";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
-import { Button, buttonVariants } from "../button";
 interface Props {
   title: string;
   id: string;

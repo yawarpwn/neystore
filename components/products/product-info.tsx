@@ -1,7 +1,7 @@
 import { type Product } from "@/types";
 import { BuyButton } from "./buy-button";
-import { PriceProduct } from "./price";
-import { RankingProduct } from "./ranking";
+import { ProductPrice } from "./product-price";
+import { ProductRanking } from "./product-ranking";
 
 function TableInfo({ details }: { details: Record<string, string> }) {
   const infoArray = Object.entries(details);
@@ -24,13 +24,13 @@ function TableInfo({ details }: { details: Record<string, string> }) {
     </div>
   );
 }
-export function InfoProduct({ product }: { product: Product }) {
+export function ProductInfo({ product }: { product: Product }) {
   const { title, features, details, price, ranking, id } = product;
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-xl">{title}</h1>
-      <RankingProduct ranking={ranking} isBig />
-      <PriceProduct price={price} isBig />
+      <ProductRanking ranking={ranking} isBig />
+      <ProductPrice price={price} isBig />
       {details && <TableInfo details={details} />}
       <BuyButton id={id} title={title} />
       <div className="">

@@ -1,5 +1,5 @@
+import { ProductCard } from "@/components/products/product-card";
 import { ProductsSkeleton } from "@/components/skeletons/products";
-import { ProductCard } from "@/components/ui/products/card";
 import { fetchProducts } from "@/lib/products";
 import { Suspense } from "react";
 

@@ -4,7 +4,7 @@ interface Props {
   price: number;
   isBig?: boolean;
 }
-export function PriceProduct({ price, isBig = false }: Props) {
+export function ProductPrice({ price, isBig = false }: Props) {
   const getDiscountPercentage = ({ price, offert }) => {
     return Math.round(((price - offert) / price) * 100);
   };

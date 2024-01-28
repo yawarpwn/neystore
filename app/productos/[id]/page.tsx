@@ -1,9 +1,7 @@
-import { ProductSkeleton } from "@/components/skeletons/product";
+import { ProductInfo } from "@/components/products/product-info";
+import { ProductViewer } from "@/components/products/product-viewer";
+import { ProductsCarousel } from "@/components/products/products-carousel";
 import { ProductsSkeleton } from "@/components/skeletons/products";
-import { Breadcrumbs } from "@/components/ui/breadcrumbs/index";
-import { InfoProduct } from "@/components/ui/products/info";
-import { ProductViewer } from "@/components/ui/products/product-viewer";
-import { ProductsCarousel } from "@/components/ui/products/products-carousel";
 import { siteConfig } from "@/config/site";
 import { fetchProductById, fetchProducts } from "@/lib/products";
 import { Suspense } from "react";
@@ -49,7 +47,7 @@ async function ViewProductServer({ id }: { id: string }) {
         images={product.images}
         video={product.video}
       />
-      <InfoProduct product={product} />
+      <ProductInfo product={product} />
     </div>
   );
 }
@@ -63,7 +61,6 @@ async function ProductPage({ params }: { params?: { id?: string } }) {
         <ViewProductServer id={id} />
       </Suspense>
       <CarouselProductsServer />
-      {/* <GenericInfo /> */}
     </main>
   );
 }

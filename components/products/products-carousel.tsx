@@ -1,7 +1,7 @@
 "use client";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { ProductCard } from "@/components/products/product-card";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { type Product } from "@/types";
-import { ProductCard } from "./card";
 
 interface Props {
   products: Product[];
