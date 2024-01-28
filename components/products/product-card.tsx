@@ -1,6 +1,7 @@
 import { ProductPrice } from '@/components/products/product-price'
 import { ProductRanking } from '@/components/products/product-ranking'
 import { type Product } from '@/types'
+import Image from 'next/image'
 import Link from 'next/link'
 
 interface Props {
@@ -15,8 +16,11 @@ export function ProductCard(props: Props) {
       <Link href={`/productos/${id}`}>
         {/* Image Card */}
         <div className='h-0 pb-[100%] relative mb-2.5'>
-          <img
+          <Image
+            width={160}
+            height={160}
             src={imageSrc}
+            alt={title}
             className='absolute inset-0 z-10 object-contain w-full h-full p-2'
           />
           <div className='absolute inset-0 w-full bg-[#fff] rounded-[8px]'>

@@ -3,16 +3,20 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  experimental: {
-    typedRoutes: true,
-  },
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'https://m.media-amazon.com',
+        hostname: 'm.media-amazon.com',
         port: '',
         pathname: '/images/**',
+      },
+
+      {
+        protocol: 'https',
+        hostname: 'ae01.alicdn.com',
+        port: '',
+        pathname: '/kf/**',
       },
     ],
   },

@@ -13,8 +13,8 @@ const images = [
   },
 
   {
-    mobile: '/assets/images/banner-2-mobile.webp',
-    desktop: '/assets/images/banner-2-desktop.webp',
+    mobile: '/assets/images/banner-tecnologia-mobile.webp',
+    desktop: '/assets/images/banner-tecnologia-desktop.webp',
   },
 
   {

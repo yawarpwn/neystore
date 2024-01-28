@@ -9,6 +9,7 @@ import {
 } from '@/components/ui/carousel'
 import { cn } from '@/lib/utils'
 import { type ProductImage, type Productvideo } from '@/types'
+import Image from 'next/image'
 import React, { useState } from 'react'
 import { VideoModal } from './video-modal'
 
@@ -30,8 +31,10 @@ export function ProductViewer({ images, video, title }: Props) {
         <div className='md:sticky top-16 md:h-[calc(100vh-3.5rem)]  flex flex-col gap-2'>
           <ShareButton />
           {/* Main  */}
-          <div className='w-80 h-80 sm:w-[400px] sm:h-[400px]  md:w-[480px] md:h-[480px] rounded-md overflow-hidden'>
-            <img
+          <div className='w-80 h-80 sm:w-[400px] sm:h-[400px]  md:w-[480px] md:h-[480px] rounded-md bg-white overflow-hidden'>
+            <Image
+              width={480}
+              height={480}
               className='w-full h-full object-contain'
               src={currentViewer}
               alt={title}
@@ -56,7 +59,7 @@ export function ProductViewer({ images, video, title }: Props) {
                   >
                     <div
                       className={cn(
-                        'opacity-100 w-16 h-16 hover:cursor-pointer',
+                        'opacity-100 w-16 h-16 hover:cursor-pointer bg-white',
                         { 'opacity-40': isActive },
                       )}
                     >

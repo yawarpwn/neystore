@@ -5,8 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { docsConfig } from '@/config/docs'
 import { cn } from '@/lib/utils'
 import { HamburgerMenuIcon } from '@radix-ui/react-icons'
-import { type Route } from 'next'
-import Link from 'next/link'
+import Link, { LinkProps } from 'next/link'
 import { useRouter } from 'next/navigation'
 import * as React from 'react'
 import { Logo } from './logo'
@@ -36,7 +35,7 @@ export function MobileNav() {
         >
           <Logo />
         </MobileLink>
-        <div className='h-[calc(100vh-8rem)] h-[calc(100dvh-8rem)] flex flex-col justify-between pt-4'>
+        <div className='h-[calc(100vh-10rem)]  flex flex-col justify-between pt-4'>
           <div className=' flex flex-col space-y-3'>
             {docsConfig.mainNav?.map(
               (item) =>
@@ -60,13 +59,12 @@ export function MobileNav() {
     </Sheet>
   )
 }
-
-interface MobileLinkProps {
-  href: Route<string> | URL
+interface MobileLinkProps extends LinkProps {
   onOpenChange?: (open: boolean) => void
   children: React.ReactNode
-  className: string
+  className?: string
 }
+
 function MobileLink(
   { href, onOpenChange, className, children, ...props }: MobileLinkProps,
 ) {
