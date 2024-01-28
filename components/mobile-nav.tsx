@@ -4,19 +4,18 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { docsConfig } from "@/config/docs";
-import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { type Route } from "next";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import * as React from "react";
-import { Icons } from "./icons";
 import { IsoLogo } from "./iso-logo";
-import { SocialIcons } from "./social-icons";
+import { Logo } from "./logo";
 
 import { buttonVariants } from "@/components/ui/button";
-import { type Route } from "next";
+import { SocialIcons } from "./social-icons";
+import { ThemeToggle } from "./theme-toggle";
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false);
@@ -32,16 +31,16 @@ export function MobileNav() {
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="pr-0">
+      <SheetContent side="left">
         <MobileLink
           href="/"
           className="flex items-center"
           onOpenChange={setOpen}
         >
-          <IsoLogo />
+          <Logo />
         </MobileLink>
-        <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
-          <div className="flex flex-col space-y-3">
+        <div className="h-[calc(100vh-4rem)] flex flex-col justify-between pt-4">
+          <div className=" flex flex-col space-y-3">
             {docsConfig.mainNav?.map(
               (item) =>
                 item.href && (
@@ -55,8 +54,11 @@ export function MobileNav() {
                 ),
             )}
           </div>
-        </ScrollArea>
-        <SocialIcons />
+          <div className="flex justify-between items-center">
+            <SocialIcons />
+            <ThemeToggle />
+          </div>
+        </div>
       </SheetContent>
     </Sheet>
   );

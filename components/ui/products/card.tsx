@@ -19,7 +19,7 @@ export function ProductCard(props: Props) {
             src={imageSrc}
             className="absolute inset-0 z-10 object-contain w-full h-full p-2"
           />
-          <div className="absolute inset-0 w-full bg-[rgba(15_17_17/0.01)] rounded-[8px]"></div>
+          <div className="absolute inset-0 w-full bg-[#fff] rounded-[8px]"></div>
         </div>
         {/* Info Card */}
         <div className="flex flex-col gap-1">
