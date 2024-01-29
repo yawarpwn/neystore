@@ -1,5 +1,6 @@
 import { ProductsCarousel } from '@/components/products/products-carousel'
-import { PageSlider } from '@/components/ui/page-slider'
+// import { PageSlider } from '@/components/ui/page-slider'
+import { HeroSlider } from '@/components/ui/hero-slider'
 import { CATEGORIES } from '@/const'
 import { fetchProducts } from '@/lib/products'
 import { type Metadata } from 'next'
@@ -19,7 +20,7 @@ export default async function Home() {
 
   return (
     <main>
-      <PageSlider />
+      <HeroSlider />
       <span>
       </span>
       <div className='container max-w-5xl flex flex-col gap-4 mt-4'>
