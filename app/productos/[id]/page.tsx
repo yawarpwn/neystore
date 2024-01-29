@@ -1,7 +1,8 @@
+import { ProductCarousel } from '@/components/products/product-carousel'
 import { ProductInfo } from '@/components/products/product-info'
 import { ProductViewer } from '@/components/products/product-viewer'
 import { ProductsCarousel } from '@/components/products/products-carousel'
-import { ProductsSkeleton } from '@/components/skeletons/products'
+import { ProductSkeleton } from '@/components/skeletons/product'
 import { siteConfig } from '@/config/site'
 import { fetchProductById, fetchProducts } from '@/lib/products'
 import { Suspense } from 'react'
@@ -43,12 +44,13 @@ async function CarouselProductsServer() {
 async function ViewProductServer({ id }: { id: string }) {
   const product = await fetchProductById(id)
   return (
-    <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 '>
-      <ProductViewer
-        title={product.title}
-        images={product.images}
-        video={product.video}
-      />
+    <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
+      <ProductCarousel images={product.images} />
+      {/* <ProductViewer */}
+      {/*   title={product.title} */}
+      {/*   images={product.images} */}
+      {/*   video={product.video} */}
+      {/* /> */}
       <ProductInfo product={product} />
     </div>
   )
@@ -59,7 +61,7 @@ async function ProductPage({ params }: { params?: { id?: string } }) {
 
   return (
     <main className='container max-w-5xl pt-4'>
-      <Suspense fallback={<ProductsSkeleton />}>
+      <Suspense fallback={<ProductSkeleton />}>
         <ViewProductServer id={id} />
       </Suspense>
       <CarouselProductsServer />

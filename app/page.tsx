@@ -1,6 +1,6 @@
 import { ProductsCarousel } from '@/components/products/products-carousel'
 // import { PageSlider } from '@/components/ui/page-slider'
-import { HeroSlider } from '@/components/ui/hero-slider'
+import { HeroSlider } from '@/components/hero-slider'
 import { CATEGORIES } from '@/const'
 import { fetchProducts } from '@/lib/products'
 import { type Metadata } from 'next'

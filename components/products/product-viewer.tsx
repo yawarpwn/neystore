@@ -18,6 +18,29 @@ interface Props {
   video?: Productvideo
   title: string
 }
+interface ImageLoaderProps {
+  imgSrc: string
+}
+
+function ImageLoader(props: ImageLoaderProps) {
+  const { imgSrc } = props
+  const [loading, setLoading] = useState(true)
+  console.log(loading)
+
+  return (
+    <div>
+      {loading && <div>Cargando..</div>}
+      <Image
+        onLoad={() => setLoading(false)}
+        width={480}
+        height={480}
+        className='w-full h-full object-contain'
+        src={imgSrc}
+      />
+    </div>
+  )
+}
+
 export function ProductViewer({ images, video, title }: Props) {
   const [currentViewer, setCurrentViewer] = useState(images[0].url)
 
@@ -32,13 +55,14 @@ export function ProductViewer({ images, video, title }: Props) {
           <ShareButton />
           {/* Main  */}
           <div className='w-80 h-80 sm:w-[400px] sm:h-[400px]  md:w-[480px] md:h-[480px] rounded-md bg-white overflow-hidden'>
-            <Image
-              width={480}
-              height={480}
-              className='w-full h-full object-contain'
-              src={currentViewer}
-              alt={title}
-            />
+            <ImageLoader imgSrc={currentViewer} />
+            {/* <Image */}
+            {/*   width={480} */}
+            {/*   height={480} */}
+            {/*   className='w-full h-full object-contain' */}
+            {/*   src={currentViewer} */}
+            {/*   alt={title} */}
+            {/* /> */}
           </div>
           {/* Thumbs */}
           <Carousel
