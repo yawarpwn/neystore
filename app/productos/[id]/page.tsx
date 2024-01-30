@@ -45,7 +45,11 @@ async function ViewProductServer({ id }: { id: string }) {
   const product = await fetchProductById(id)
   return (
     <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
-      <ProductCarousel images={product.images} />
+      <ProductCarousel
+        title={product.title}
+        video={product.video}
+        images={product.images}
+      />
       {/* <ProductViewer */}
       {/*   title={product.title} */}
       {/*   images={product.images} */}

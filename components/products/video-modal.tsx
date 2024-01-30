@@ -10,9 +10,9 @@ export function VideoModal({ video }: { video: Productvideo }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className='w-16 h-16 hover:cursor-pointer relative'>
-          <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary w-8 h-8 rounded-full flex items-center justify-center'>
-            <PlayIcon className='text-white w-5 h-5' />
+        <div className='shrink-0 grow-0 basis-[10%] hover:cursor-pointer relative'>
+          <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary w-7 h-7 rounded-full flex items-center justify-center'>
+            <PlayIcon fill='white' className='text-white w-4 h-4' />
           </div>
           <img className='w-full h-full object-cover' src={cover} alt={title} />
         </div>

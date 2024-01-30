@@ -1,6 +1,7 @@
 'use client'
 import { cn } from '@/lib/utils'
-import { Loader, Loader2 } from 'lucide-react'
+import { Loader2 } from 'lucide-react'
+import Image from 'next/image'
 import React from 'react'
 
 const PLACEHOLDER_SRC =
@@ -10,9 +11,10 @@ interface Props {
   imgSrc: string
   inView: boolean
   index: number
+  alt: string
 }
 export function LazyLoadImage(props: Props) {
-  const { imgSrc, inView, index } = props
+  const { imgSrc, inView, index, alt } = props
   const [hasLoaded, setHasLoaded] = React.useState(false)
 
   const setLoaded = React.useCallback(() => {
@@ -25,16 +27,21 @@ export function LazyLoadImage(props: Props) {
       {/*   <div className='absolute top-1/2 left-1/2 text-indigo-500'>Spinner</div> */}
       {/* )} */}
       {!hasLoaded && (
-        <div className='relative w-[350px] h-[350px] lg:w-[500px] lg:h-[500px] bg-muted animate-pulse flex items-center justify-center'>
+        <div
+          className={`relative w-[350px] h-[350px] lg:w-[500px] lg:h-[500px] sm:w-[450px] sm:h-[450px] 
+bg-muted animate-pulse flex items-center justify-center`}
+        >
           <Loader2 className='animate-spin text-muted-foreground' />
         </div>
       )}
-      <div className='w-[350px] h-[350px] lg:w-[500px] lg:h-[500px]'>
-        <img
+      <div className='w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] lg:w-[500px] lg:h-[500px]'>
+        <Image
           className='w-full h-full object-contain'
           onLoad={setLoaded}
+          width={500}
+          height={500}
           src={inView ? imgSrc : PLACEHOLDER_SRC}
-          alt='placeholder'
+          alt={alt}
           data-src={imgSrc}
         />
       </div>
